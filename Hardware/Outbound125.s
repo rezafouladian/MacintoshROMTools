@@ -12,3 +12,8 @@ IsMacSEROM      EQU         0                       ; Bit 0 = Mac SE ROM
 CfgBit1         EQU         1
 CfgBit3         EQU         3
 CfgBit7         EQU         7
+
+
+; Host SE or Plus Hardware
+
+ScreenLow       EQU         $3FA700
