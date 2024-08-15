@@ -6,6 +6,7 @@ Clock16M        EQU         $FE0000
 DBase           EQU         $F6E1FF
 
 VIA_Base        EQU         $F70000
+VBase           EQU         VIA_Base
 
 SCSI_Base       EQU         $F90000
 

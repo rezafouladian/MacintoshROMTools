@@ -1,6 +1,7 @@
 BaseOfROM       EQU         $400000
 PtchROMBase     EQU         $F80000
 OutboundDisp    EQU         $700000                 ; Outbound 32KB SRAM/Internal Display
+OutboundVIA     EQU         $E7E1FE
 
 PtchTblBase     EQU         $707D04                 ; Pointer to current patch source
 ExpectedPC      EQU         $707D0A                 ; Low word of PC from exception to check for patching
@@ -21,3 +22,8 @@ ScreenLow       EQU         $3FA700
 SCSIBase        EQU         $580000
 SCSIRd          EQU         $580000
 SCSIWr          EQU         $580001
+
+VBase           EQU         $EFE1FE
+
+SCCRBase        EQU         $9FFFFE
+SCCWBase        EQU         $BFFFF9
