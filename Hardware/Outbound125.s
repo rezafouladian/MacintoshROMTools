@@ -17,3 +17,7 @@ CfgBit7         EQU         7
 ; Host SE or Plus Hardware
 
 ScreenLow       EQU         $3FA700
+
+SCSIBase        EQU         $580000
+SCSIRd          EQU         $580000
+SCSIWr          EQU         $580001
