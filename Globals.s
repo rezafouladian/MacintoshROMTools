@@ -71,3 +71,6 @@ CaretTime       EQU         $2F4                    ; Caret-blink ticks [long]
 PWMBuf2         EQU         $312                    ; PWM buffer 1 (or 2 if sound) [pointer]
 FSFCBLen        EQU         $3F6                    ; HFS present flag
 JIODone         EQU         $8FC
+
+
+TraceVector     EQU         $24
