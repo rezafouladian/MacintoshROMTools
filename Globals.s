@@ -17,6 +17,7 @@ DskVerify       EQU         $12C
 LoadTrap        EQU         $12D
 MmInOK          EQU         $12E
 CPUFlag         EQU         $12F
+SonyVars        EQU         $134
 PWMValue        EQU         $138
 PollProc        EQU         $13E
 DskErr          EQU         $142                    ; Disk routine result code [word]
@@ -90,6 +91,14 @@ SysMap          EQU         $A58
 PWMBuf1         EQU         $B0A
 BootMask        EQU         $B0E
 HWCfgFlags      EQU         $B22
+hwCbSCSI        EQU         15                      ; SCSI port present
+hwCbClock       EQU         14
+hwCbExPRAM      EQU         13
+hwCbFPU         EQU         12
+hwCbMMU         EQU         11
+hwCbADB         EQU         10
+hwCbAUX         EQU         9
+hwCbPwrMgr      EQU         8
 TimeSCSIDB      EQU         $B24                    ; Number of times SCSI can be accessed per millisecond [word]
 WidthTabHandle  EQU         $B2A
 BtDskRfn        EQU         $B34
@@ -123,5 +132,6 @@ ResetStackPtr   EQU         $0                      ;
 ResetVector     EQU         $4
 IllegalInstructionVector    EQU $10
 TraceVector     EQU         $24
+LineAVector     EQU         $28
 Lev1AutoVector  EQU         $64
 Lev2AutoVector  EQU         $68
