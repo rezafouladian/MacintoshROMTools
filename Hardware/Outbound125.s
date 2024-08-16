@@ -30,6 +30,33 @@ sICR            EQU         $10
 sCSR            EQU         $40
 
 VBase           EQU         $EFE1FE
+; VIA Offsets
+vBufB           EQU         $0
+vBufAH          EQU         $200
+vDIRB           EQU         $400
+vDIRA           EQU         $600
+vT1C            EQU         $800
+vT1CH           EQU         $A00
+vT1L            EQU         $C00
+vT1LH           EQU         $E00
+vT2C  			EQU 		$1000
+vT2CH 			EQU 		$1200
+vSR   			EQU 		$1400
+vACR  			EQU 		$1600
+vPCR  			EQU 		$1800
+vIFR  			EQU 		$1A00
+vIER  			EQU 		$1C00
+vBufA 			EQU 		$1E00
+; VIA IFR/IER Bits
+ifCA2 			EQU 		0
+ifCA1 			EQU 		1
+ifSR  			EQU 		2
+ifCB2 			EQU 		3
+ifCB1 			EQU 		4
+ifT2  			EQU 		5
+ifT1  			EQU 		6
+ifIRQ 			EQU 		7
+
 
 SCCRBase        EQU         $9FFFFE
 SCCWBase        EQU         $BFFFF9
