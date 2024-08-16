@@ -21,7 +21,7 @@ CfgBit7         EQU         7
 
 ScreenLow       EQU         $3FA700
 
-SCSIBase        EQU         $580000
+SCSI_Base       EQU         $580000
 SCSIRd          EQU         $580000
 SCSIWr          EQU         $580001
 SCSI_ICRwrite   EQU         $580011

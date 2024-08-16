@@ -9,6 +9,8 @@ VIA_Base        EQU         $F70000
 VBase           EQU         VIA_Base
 
 SCSI_Base       EQU         $F90000
+SCSIrd          EQU         $F90000
+SCSIwr          EQU         $F90001
 
 Sound_Base      EQU         $FB0000
 
