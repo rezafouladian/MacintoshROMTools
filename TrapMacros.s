@@ -1,7 +1,7 @@
     macro _Open
         dc.w    $A000
     endm
-    
+
     macro _Read
         dc.w    $A002
     endm
@@ -32,6 +32,10 @@
 
     macro _Delay
         dc.w    $A03B
+    endm
+
+    macro _DrvrInstall
+        dc.w    $A03D
     endm
 
     macro _InitUtil
