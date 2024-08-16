@@ -54,6 +54,10 @@
         dc.w    $A057
     endm
 
+    macro _InsTime
+        dc.w    $A058
+    endm
+
     macro _NMInstall
         dc.w    $A05E
     endm
