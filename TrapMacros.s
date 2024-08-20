@@ -106,6 +106,7 @@
         dc.w    $A852
     endm
 
+_InitGraf       EQU         $A86E
     macro _InitGraf
         dc.w    $A86E
     endm
