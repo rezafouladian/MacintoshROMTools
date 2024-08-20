@@ -16,6 +16,8 @@ CfgBit3         EQU         3
 CfgBit5         EQU         5
 CfgBit7         EQU         7
 OutboundCfg2    EQU         $707D09                 ; A second config space?
+Cfg2Bit0        EQU         0
+Cfg2Bit1        EQU         1
 
 
 ; Host SE or Plus Hardware
