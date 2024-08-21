@@ -2,7 +2,7 @@ BaseOfROM       EQU         $400000
 PtchROMBase     EQU         $F80000
 OutboundDisp    EQU         $700000                 ; Outbound 32KB SRAM/Internal Display
 OutboundVIA     EQU         $E7E1FE                 ; Unconfirmed
-
+OutboundGlobals EQU         $707D00                 ; Pointer to globals used by Outbound
 PtchTblBase     EQU         $707D04                 ; Pointer to current patch source
 ExpectedPC      EQU         $707D0A                 ; Low word of PC from exception to check for patching
 PatchOffset     EQU         $707D0C                 ; Offset from PatchTableBase to code to run

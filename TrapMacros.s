@@ -89,9 +89,18 @@
     macro _NewPtrSys
         dc.w    $A51E
     endm
+__SetToolBoxTrapAddress EQU $A647
+    macro _SetToolBoxTrapAddress
+        dc.w    $A647
+    endm
 
     macro _NewPtrSysClear
         dc.w    $A71E
+    endm
+
+__GetToolBoxTrapAddress EQU $A746
+    macro _GetToolBoxTrapAddress
+        dc.w    $A746
     endm
 
     macro _CopyMask
@@ -106,7 +115,7 @@
         dc.w    $A852
     endm
 
-__InitGraf       EQU         $A86E
+__InitGraf       EQU        $A86E
     macro _InitGraf
         dc.w    $A86E
     endm
