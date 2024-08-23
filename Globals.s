@@ -44,6 +44,7 @@ BootDrive       EQU         $210
 JKybdTask       EQU         $21A                    ; Keyboard VBL task hook [pointer]
 AlarmSt         EQU         $21F
 AlarmState      EQU         $21F
+MemErr          EQU         $220
 FlEvtMask       EQU         $25E
 SoundPtr        EQU         $262                    ; Four-tone sound definition table [pointer]
 SoundBase       EQU         $266
