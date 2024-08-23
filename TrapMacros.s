@@ -22,12 +22,20 @@
         dc.w    $A02E
     endm
 
+    macro _PostEvent
+        dc.w    $A02F
+    endm
+
     macro _VInstall
         dc.w    $A033
     endm
 
     macro _VRemove
         dc.w    $A034
+    endm
+
+    macro _OffLine
+        dc.w    $A035
     endm
 
     macro _Delay
@@ -82,6 +90,10 @@
         dc.w    $A085
     endm
 
+    macro _NewPtr
+        dc.w    $A11E
+    endm
+
     macro _IdleUpdate
         dc.w    $A285
     endm
@@ -89,6 +101,7 @@
     macro _NewPtrSys
         dc.w    $A51E
     endm
+    
 __SetToolBoxTrapAddress EQU $A647
     macro _SetToolBoxTrapAddress
         dc.w    $A647
