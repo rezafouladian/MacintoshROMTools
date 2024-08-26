@@ -12,12 +12,18 @@ OutboundCfg     EQU         $707D08                 ; Space for marking hardware
 IsMacSEROM      EQU         0                       ; Bit 0 = Mac SE ROM
 CfgBit1         EQU         1
 CfgBit2         EQU         2
-CfgBit3         EQU         3
+CfgBit3         EQU         3                       ; Possibly for marking if a host system is present
 CfgBit5         EQU         5
 CfgBit7         EQU         7
 OutboundCfg2    EQU         $707D09                 ; A second config space?
 Cfg2Bit0        EQU         0
 Cfg2Bit1        EQU         1
+
+; Mostly unconfirmed memory map spaces
+RAMDiskBase     EQU         $600000                 ; Outbound RAM disk
+OutboundHDBase  EQU         $C00000                 ; Outbound internal HD
+OutboundFlpBase EQU         $C80000                 ; Outbound internal floppy
+OutboundPwrCtl  EQU         $E00000                 ; Battery and contrast
 
 
 ; Host SE or Plus Hardware
