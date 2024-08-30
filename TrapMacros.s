@@ -50,6 +50,14 @@
         dc.w    $A03F
     endm
 
+    macro _SetTrapAddress
+        dc.w    $A047
+    endm
+
+    macro _AddDrive
+        dc.w    $A04E
+    endm
+
     macro _ReadXPRam
         dc.w    $A051
     endm
@@ -92,6 +100,10 @@
 
     macro _NewPtr
         dc.w    $A11E
+    endm
+    
+    macro _SetOSTrapAddress
+        dc.w    $A247
     endm
 
     macro _IdleUpdate

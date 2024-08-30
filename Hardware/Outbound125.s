@@ -11,9 +11,11 @@ PatchTblPtr     EQU         $707D18                 ; Pointer to current locatio
 OutboundCfg     EQU         $707D08                 ; Space for marking hardware config of some sort
 IsMacSEROM      EQU         0                       ; Bit 0 = Mac SE ROM
 CfgBit1         EQU         1
-CfgBit2         EQU         2
+CfgBit2         EQU         2                       ; SCSI related?
 CfgBit3         EQU         3                       ; Possibly for marking if a host system is present
+CfgBit4         EQU         4
 CfgBit5         EQU         5
+CfgBit6         EQU         6
 CfgBit7         EQU         7
 OutboundCfg2    EQU         $707D09                 ; A second config space?
 Cfg2Bit0        EQU         0

@@ -79,8 +79,10 @@ MMDefFlags      EQU         $326
 IAZNotify       EQU         $33C
 FSFCBLen        EQU         $3F6                    ; HFS present flag
 JADBProc        EQU         $6B8
+JCrsrObscure    EQU         $81C
 ScrnBase        EQU         $824                    ; Screen base [pointer]
 MTemp           EQU         $828
+CrsrBusy        EQU         $8CD
 CrsrNew         EQU         $8CE
 MouseMask       EQU         $8D6
 JFetch          EQU         $8F4
