@@ -13,7 +13,7 @@ StkLowPt        EQU         $110                    ; Lowest stack as measured i
 HeapEnd         EQU         $114                    ; End of heap [pointer]
 TheZone         EQU         $118                    ; Current heap zone [pointer]
 UTableBase      EQU         $11C
-DskVerify       EQU         $12C
+DskVerify       EQU         $12C                    ; Used by 3.5 disk driver for read/verify [byte]
 LoadTrap        EQU         $12D
 MmInOK          EQU         $12E
 CPUFlag         EQU         $12F
@@ -47,10 +47,12 @@ AlarmState      EQU         $21F
 MemErr          EQU         $220
 FlEvtMask       EQU         $25E
 SoundPtr        EQU         $262                    ; Four-tone sound definition table [pointer]
-SoundBase       EQU         $266
+SoundBase       EQU         $266                    ; Sound Bitmap [pointer]
 SoundVBL        EQU         $26A                    ; Sound VBL tasks [16 bytes]
 SoundDCE        EQU         $27A                    ; Sound driver DCE [pointer]
 SoundActive     EQU         $27E                    ; Sound is active? [byte]
+SoundLevel      EQU         $27F                    ; Current level in buffer [byte]
+CurPitch        EQU         $290                    ; Current pitch value [word]
 SwitcherTPtr    EQU         $286
 ROM85           EQU         $28E
 PortAUse        EQU         $290                    ; Serial port A use [byte]
@@ -70,14 +72,17 @@ ExpandMem       EQU         $2B6                    ; Pointer to expanded memory
 DSAlertTab      EQU         $2BA                    ; System error alerts [pointer]
 DoubleTime      EQU         $2F0                    ; Double-click ticks [long]
 CaretTime       EQU         $2F4                    ; Caret-blink ticks [long]
+TagData         EQU         $2FA                    ; Sector tag info for disk drivers [14 bytes]
 DrvQHdr         EQU         $308
 PWMBuf2         EQU         $312                    ; PWM buffer 1 (or 2 if sound) [pointer]
 Lo3Bytes        EQU         $31A
 MinStack        EQU         $31E
 DefltStack      EQU         $322
 MMDefFlags      EQU         $326
+DSDrawProc      EQU         $334                    ; Alternate syserror draw procedure [pointer]
 IAZNotify       EQU         $33C
 FSFCBLen        EQU         $3F6                    ; HFS present flag
+DSAlertRect     EQU         $3F8                    ; Rectanble for DS alert [8 bytes]
 JADBProc        EQU         $6B8
 JCrsrObscure    EQU         $81C
 ScrnBase        EQU         $824                    ; Screen base [pointer]
@@ -85,12 +90,22 @@ MTemp           EQU         $828
 CrsrBusy        EQU         $8CD
 CrsrNew         EQU         $8CE
 MouseMask       EQU         $8D6
+WWExist         EQU         $8F2                    ; Window manager initialized? [byte]
+QDExist         EQU         $8F3                    ; Quickdraw is initialized? [byte]
 JFetch          EQU         $8F4
 JIODone         EQU         $8FC
+CurApRefNum     EQU         $900                    ; RefNum of Application's resFile [word]
+LaunchFlag      EQU         $902                    ; From launch or chain [byte]
+SaveSegHandle   EQU         $930
+CurJTOffset     EQU         $934                    ; Current jump table offset [word]
+CurPageOption   EQU         $936                    ; Current page 2 configuration [word]
+LoaderPBlock    EQU         $93A                    ; Param block for ExitToShell [10 bytes]
 OneOne          EQU         $A02
 MinusOne        EQU         $A06
 TopMapHndl      EQU         $A50
 SysMap          EQU         $A58
+ResumeProc      EQU         $A8C                    ; Resume procedure from InitDialogs [pointer]
+DSErrCode       EQU         $AF0                    ; Last system error alert ID
 PWMBuf1         EQU         $B0A
 BootMask        EQU         $B0E
 HWCfgFlags      EQU         $B22
