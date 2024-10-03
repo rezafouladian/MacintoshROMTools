@@ -14,7 +14,7 @@ HeapEnd         EQU         $114                    ; End of heap [pointer]
 TheZone         EQU         $118                    ; Current heap zone [pointer]
 UTableBase      EQU         $11C
 DskVerify       EQU         $12C                    ; Used by 3.5 disk driver for read/verify [byte]
-LoadTrap        EQU         $12D
+LoadTrap        EQU         $12D                    ; Trap before launch? [byte]
 MmInOK          EQU         $12E
 CPUFlag         EQU         $12F
 SonyVars        EQU         $134
@@ -100,6 +100,10 @@ SaveSegHandle   EQU         $930
 CurJTOffset     EQU         $934                    ; Current jump table offset [word]
 CurPageOption   EQU         $936                    ; Current page 2 configuration [word]
 LoaderPBlock    EQU         $93A                    ; Param block for ExitToShell [10 bytes]
+ScrapVars       EQU         $960                    ; Scrap manager variables [32 bytes]
+ScrapInfo       EQU         $960                    ; Scrap length [long]
+ScrapTag        EQU         $970                    ; Scrap file name
+ScrapEnd        EQU         $980                    ; End of scrap vars
 OneOne          EQU         $A02
 MinusOne        EQU         $A06
 TopMapHndl      EQU         $A50
@@ -144,6 +148,7 @@ TimeSCCDB       EQU         $D02                    ; Number of times the SCC ca
 PowerMgrVars    EQU         $D18
 VertRRate       EQU         $D30
 MickeyBytes     EQU         $D6A
+JStdTEXT        EQU         $1008
 
 ; 68000 Vectors
 ResetStackPtr   EQU         $0                      ; 

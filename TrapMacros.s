@@ -132,12 +132,20 @@ __GetToolBoxTrapAddress EQU $A746
         dc.w    $A817
     endm
 
+    macro _MeasureText
+        dc.w    $A837
+    endm
+
     macro _SetCursor
         dc.w    $A851
     endm
 
     macro _HideCursor
         dc.w    $A852
+    endm
+
+    macro _ShowCursor
+        dc.w    $A853
     endm
 
 __InitGraf       EQU        $A86E
