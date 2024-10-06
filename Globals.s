@@ -104,6 +104,7 @@ ScrapVars       EQU         $960                    ; Scrap manager variables [3
 ScrapInfo       EQU         $960                    ; Scrap length [long]
 ScrapTag        EQU         $970                    ; Scrap file name
 ScrapEnd        EQU         $980                    ; End of scrap vars
+Scratch8        EQU         $9FA
 OneOne          EQU         $A02
 MinusOne        EQU         $A06
 TopMapHndl      EQU         $A50

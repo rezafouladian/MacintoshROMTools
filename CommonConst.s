@@ -8,3 +8,6 @@ TraceBit        EQU         15                      ; Trace bit. When set, execu
 TROMCode        EQU         $55AAAA55               ; Magic bytes to identify test ROM
 
 GRAFPROCS       EQU         $68
+
+sleepConst      EQU         'SARA'
+wmStConst       EQU         'WLSC'
