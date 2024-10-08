@@ -40,7 +40,8 @@ IWM             EQU         $1E0                    ; IWM base pointer [pointer]
 Scratch20       EQU         $1E4                    ; System parameter scratch [20 bytes]
 SPKbd           EQU         $206                    ; Keyboard repeat threshold in 4/60ths [2 4-bit]
 SPClikCaret     EQU         $209                    ; Double-click and caret-blink times [byte]
-BootDrive       EQU         $210
+BootDrive       EQU         $210                    ; Drive number of boot drive [word]
+SFSaveDisk      EQU         $214                    ; Last vRefNum seen by standard file [word]
 JKybdTask       EQU         $21A                    ; Keyboard VBL task hook [pointer]
 AlarmSt         EQU         $21F
 AlarmState      EQU         $21F
@@ -80,13 +81,21 @@ MinStack        EQU         $31E
 DefltStack      EQU         $322
 MMDefFlags      EQU         $326
 DSDrawProc      EQU         $334                    ; Alternate syserror draw procedure [pointer]
-IAZNotify       EQU         $33C
+EjectNotify     EQU         $338                    ; Eject notify procedure [pointer]
+IAZNotify       EQU         $33C                    ; Word swaps notify procedure [pointer]
 FSFCBLen        EQU         $3F6                    ; HFS present flag
 DSAlertRect     EQU         $3F8                    ; Rectanble for DS alert [8 bytes]
 JADBProc        EQU         $6B8
 JCrsrObscure    EQU         $81C
 ScrnBase        EQU         $824                    ; Screen base [pointer]
 MTemp           EQU         $828
+CRSRBASE        EQU         $898                    ; scrnBase for cursor [long]
+CrsrDevice      EQU         $89C                    ; Current cursor device [long]
+SrcDevice       EQU         $8A0                    ; Src device for Stretchbits [long]
+MainDevice      EQU         $8A4                    ; The main screen device [long]
+DeviceList      EQU         $8A8                    ; List of display devices [long]
+CRSRROW         EQU         $8AC                    ; Rowbytes for current cursor screen [word]
+QDColors        EQU         $8B0                    ; Handle to default colors [long]
 CrsrBusy        EQU         $8CD
 CrsrNew         EQU         $8CE
 MouseMask       EQU         $8D6
@@ -99,6 +108,7 @@ LaunchFlag      EQU         $902                    ; From launch or chain [byte
 SaveSegHandle   EQU         $930
 CurJTOffset     EQU         $934                    ; Current jump table offset [word]
 CurPageOption   EQU         $936                    ; Current page 2 configuration [word]
+HiliteMode      EQU         $938                    ; Used for color highlighting
 LoaderPBlock    EQU         $93A                    ; Param block for ExitToShell [10 bytes]
 ScrapVars       EQU         $960                    ; Scrap manager variables [32 bytes]
 ScrapInfo       EQU         $960                    ; Scrap length [long]
