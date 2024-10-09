@@ -14,7 +14,14 @@ vSound2         EQU         2
 vSound1         EQU         1
 vSound0         EQU         0
 ; VIA 1 Buffer B
-
+vSndEnb         EQU         7
+vSyncEnA        EQU         6
+vFDesk2         EQU         5
+vFDesk1         EQU         4
+vFDBInt         EQU         3
+vRTCEnb         EQU         2
+vRTCClk         EQU         1
+vRTCData        EQU         0
 
 VBase2          EQU         $50F02000
 ; VIA 2 Buffer A
@@ -28,6 +35,14 @@ v2IRQ2          EQU         1
 v2IRQ1          EQU         0
 ; VIA 2 Buffer B
 v2VBL           EQU         7
+v2SndExt        EQU         6
+v2TM0A          EQU         5
+v2TM1A          EQU         4
+vFC3            EQU         3
+v2PowerOff      EQU         2
+v2BusLk         EQU         1
+v2CDis          EQU         0
+
 
 SCSI_Base       EQU         $50F10000
 SCSI_DMA        EQU         $50F12000
