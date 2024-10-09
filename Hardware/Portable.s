@@ -7,6 +7,10 @@ DBase           EQU         $F6E1FF
 
 VIA_Base        EQU         $F70000
 VBase           EQU         VIA_Base
+vBufB           EQU         $0
+vDIRB           EQU         $400
+vDIRA           EQU         $600
+vBufA           EQU         $1E00
 
 SCSI_Base       EQU         $F90000
 SCSIrd          EQU         $F90000
