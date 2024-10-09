@@ -157,8 +157,10 @@ WarmStart       EQU         $CFC
 TimeDBRA        EQU         $D00                    ; Number of times the DBRA instruction can be executed per millisecond [word]
 TimeSCCDB       EQU         $D02                    ; Number of times the SCC can be accessed per millisecond [word]
 PowerMgrVars    EQU         $D18
+TableSeed       EQU         $D20                    ; Seed value for color table ID's [long]
 VertRRate       EQU         $D30
 MickeyBytes     EQU         $D6A
+JDTInstall      EQU         $D9C                    ; Pointer to deferred task install routine [long]
 JStdTEXT        EQU         $1008
 
 ; 68000 Vectors
