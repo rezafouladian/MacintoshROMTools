@@ -43,6 +43,11 @@ v2PowerOff      EQU         2
 v2BusLk         EQU         1
 v2CDis          EQU         0
 
+vBufB           EQU         $0
+vDIRB           EQU         $400
+vDIRA           EQU         $600
+vBufA           EQU         $1E00
+
 
 SCSI_Base       EQU         $50F10000
 SCSI_DMA        EQU         $50F12000
