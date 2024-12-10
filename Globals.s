@@ -13,6 +13,7 @@ StkLowPt        EQU         $110                    ; Lowest stack as measured i
 HeapEnd         EQU         $114                    ; End of heap [pointer]
 TheZone         EQU         $118                    ; Current heap zone [pointer]
 UTableBase      EQU         $11C
+MacJmp          EQU         $120                    ; MacsBug jump table [pointer]
 DskVerify       EQU         $12C                    ; Used by 3.5 disk driver for read/verify [byte]
 LoadTrap        EQU         $12D                    ; Trap before launch? [byte]
 MmInOK          EQU         $12E
@@ -32,15 +33,16 @@ KeyRepTime      EQU         $18A                    ; Tick count when key was la
 KeyThresh       EQU         $18E                    ; Threshold for key repeat [word]
 KeyRepThresh    EQU         $190
 Lvl1DT          EQU         $192                    ; Interrupt level 1 dispatch table [32 bytes]
-SCCRd           EQU         $1D8                    ; SCC base read address [pointer]
-SCCWr           EQU         $1DC                    ; SCC base write address [pointer]
 UnitNtryCnt     EQU         $1D2                    ; Count of entries in unit table [word]
 VIA             EQU         $1D4                    ; VIA base pointer [pointer]
+SCCRd           EQU         $1D8                    ; SCC base read address [pointer]
+SCCWr           EQU         $1DC                    ; SCC base write address [pointer]
 IWM             EQU         $1E0                    ; IWM base pointer [pointer]
 Scratch20       EQU         $1E4                    ; System parameter scratch [20 bytes]
 SPKbd           EQU         $206                    ; Keyboard repeat threshold in 4/60ths [2 4-bit]
 SPClikCaret     EQU         $209                    ; Double-click and caret-blink times [byte]
 BootDrive       EQU         $210                    ; Drive number of boot drive [word]
+JShell          EQU         $212                    ; Journaling shell state [word]
 SFSaveDisk      EQU         $214                    ; Last vRefNum seen by standard file [word]
 JKybdTask       EQU         $21A                    ; Keyboard VBL task hook [pointer]
 AlarmSt         EQU         $21F
@@ -99,6 +101,8 @@ QDColors        EQU         $8B0                    ; Handle to default colors [
 CrsrBusy        EQU         $8CD
 CrsrNew         EQU         $8CE
 MouseMask       EQU         $8D6
+WidthListHand   EQU         $8E4                    ; List of extra width tables, or nil
+CrsrThresh      EQU         $8EC                    ; Delta threshold for mouse scaling [word]
 WWExist         EQU         $8F2                    ; Window manager initialized? [byte]
 QDExist         EQU         $8F3                    ; Quickdraw is initialized? [byte]
 JFetch          EQU         $8F4
@@ -114,15 +118,26 @@ ScrapVars       EQU         $960                    ; Scrap manager variables [3
 ScrapInfo       EQU         $960                    ; Scrap length [long]
 ScrapTag        EQU         $970                    ; Scrap file name
 ScrapEnd        EQU         $980                    ; End of scrap vars
+GrayRgn         EQU         $9EE                    ; Rounded gray desk region [handle]
 Scratch8        EQU         $9FA
 OneOne          EQU         $A02
 MinusOne        EQU         $A06
-TopMapHndl      EQU         $A50
-SysMap          EQU         $A58
+SavedHandle     EQU         $A28                    ; Saved bits under a menu [handle]
+MrMacHook       EQU         $A2C                    ; Mr. Macintosh hook [pointer]
+TopMapHndl      EQU         $A50                    ; Topmost map in list [handle]
+SysMapHndl      EQU         $A54                    ; System map [handle]
+SysMap          EQU         $A58                    ; Reference number of system map [word]
+CurMap          EQU         $A5A                    ; Reference number of current map [word]
+ResReadOnly     EQU         $A5C                    ; Read only flag [word]
+ResLoad         EQU         $A5E                    ; Auto-load feature [word]
+ResErr          EQU         $A60                    ; Resource error code [word]
 ResumeProc      EQU         $A8C                    ; Resume procedure from InitDialogs [pointer]
+SysResName      EQU         $AD8                    ; Name of system resource file
 DSErrCode       EQU         $AF0                    ; Last system error alert ID
+ResErrProc      EQU         $AF2                    ; Reference number of current map [word]
 PWMBuf1         EQU         $B0A
 BootMask        EQU         $B0E
+WidthPtr        EQU         $B10                    ; Font manager global [long]
 HWCfgFlags      EQU         $B22
 hwCbSCSI        EQU         15                      ; SCSI port present
 hwCbClock       EQU         14
@@ -134,20 +149,24 @@ hwCbAUX         EQU         9
 hwCbPwrMgr      EQU         8
 TimeSCSIDB      EQU         $B24                    ; Number of times SCSI can be accessed per millisecond [word]
 WidthTabHandle  EQU         $B2A
+TimeVars        EQU         $B30
 BtDskRfn        EQU         $B34
 NTSC            EQU         $B3E
 ROMMapInsert    EQU         $B9E
-WordRedraw      EQU         $BA5
+WordRedraw      EQU         $BA5                    ; Used by TextEdit RecalDraw [byte]
 SysFontFam      EQU         $BA6
-TESysJust       EQU         $BAC
+TESysJust       EQU         $BAC                    ; System justification [word]
 SCSIBase        EQU         $C00
 SCSIDMA         EQU         $C04
 SCSIHsk         EQU         $C08
 RowBits         EQU         $C20
 ColLines        EQU         $C22
 ScreenBytes     EQU         $C24
+IOPMgrVars      EQU         $C28
+NMIFlag         EQU         $C2C
 SCSIPoll        EQU         $C2F
 MMUType         EQU         $CB1
+BoxFlag         EQU         $CB3
 WhichBox        EQU         $CB3
 ASCBase         EQU         $CC0
 SMGlobals       EQU         $CC4
@@ -161,7 +180,23 @@ TableSeed       EQU         $D20                    ; Seed value for color table
 VertRRate       EQU         $D30
 MickeyBytes     EQU         $D6A
 JDTInstall      EQU         $D9C                    ; Pointer to deferred task install routine [long]
+JSwapMMU        EQU         $DBC                    ; Jump vector to SwapMMU routine [long]
+AddrMapFlags    EQU         $DD0                    ; Valid bits for base addresses 0-31 (universal ROM) [long]
+UnivROMFlags    EQU         $DD4                    ; Product specific flags for universal ROM [long]
+UnivInfoPtr     EQU         $DD8                    ; Pointer to configuration information for universal ROM [long]
+BootGlobPtr     EQU         $DDC
+EgretBase       EQU         $DE0                    ; Egret Manager global variables
 JStdTEXT        EQU         $1008
+Phys2Log        EQU         $1EF0
+RealMemTop      EQU         $1EF4
+PhysMemTop      EQU         $1EF8
+MMFlags         EQU         $1EFC
+vMMRHPrologue   EQU         $1FE0
+vMMMMPrologue   EQU         $1FE4
+vMMEpilogue     EQU         $1FE8
+vMMNoErrEpilogue EQU        $1FEC
+LockMemCT       EQU         $1FF4
+DockingGlobals  EQU         $1FF8                   ; Pointer to docking globals
 
 ; 68000 Vectors
 ResetStackPtr   EQU         $0                      ; 
