@@ -12,3 +12,7 @@ GRAFPROCS       EQU         $68
 sleepConst      EQU         'SARA'
 wmStConst       EQU         'WLSC'
 sleepSig        EQU         'MATT'
+SleepDemand     EQU         2
+SleepWakeUp     EQU         3
+SleepUnlock     EQU         4
+SleepNow        EQU         6
