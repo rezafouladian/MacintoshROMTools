@@ -41,6 +41,7 @@ IWM             EQU         $1E0                    ; IWM base pointer [pointer]
 Scratch20       EQU         $1E4                    ; System parameter scratch [20 bytes]
 SPKbd           EQU         $206                    ; Keyboard repeat threshold in 4/60ths [2 4-bit]
 SPClikCaret     EQU         $209                    ; Double-click and caret-blink times [byte]
+TimeLM          EQU         $20C
 BootDrive       EQU         $210                    ; Drive number of boot drive [word]
 JShell          EQU         $212                    ; Journaling shell state [word]
 SFSaveDisk      EQU         $214                    ; Last vRefNum seen by standard file [word]

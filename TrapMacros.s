@@ -89,6 +89,14 @@
     macro _InitEvents
         dc.w    $A06D
     endm
+
+    macro _CountADBs
+        dc.w    $A077
+    endm
+
+    macro _ADBReInit
+        dc.w    $A07B
+    endm
     
     macro _GetDefaultStartup
         dc.w    $A07D
