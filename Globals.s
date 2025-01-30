@@ -85,6 +85,8 @@ MMDefFlags      EQU         $326
 DSDrawProc      EQU         $334                    ; Alternate syserror draw procedure [pointer]
 EjectNotify     EQU         $338                    ; Eject notify procedure [pointer]
 IAZNotify       EQU         $33C                    ; Word swaps notify procedure [pointer]
+FlushOnly       EQU         $346
+NoEject         EQU         $34B
 FSFCBLen        EQU         $3F6                    ; HFS present flag
 DSAlertRect     EQU         $3F8                    ; Rectanble for DS alert [8 bytes]
 JADBProc        EQU         $6B8
@@ -171,6 +173,7 @@ WhichBox        EQU         $CB3
 ASCBase         EQU         $CC0
 SMGlobals       EQU         $CC4
 ADBDelay        EQU         $CEA
+VIA2            EQU         $CEC
 ADBBase         EQU         $CF8
 WarmStart       EQU         $CFC
 TimeDBRA        EQU         $D00                    ; Number of times the DBRA instruction can be executed per millisecond [word]
