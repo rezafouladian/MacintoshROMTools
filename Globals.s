@@ -117,6 +117,7 @@ CurJTOffset     EQU         $934                    ; Current jump table offset 
 CurPageOption   EQU         $936                    ; Current page 2 configuration [word]
 HiliteMode      EQU         $938                    ; Used for color highlighting
 LoaderPBlock    EQU         $93A                    ; Param block for ExitToShell [10 bytes]
+ChooserBits     EQU         $946
 ScrapVars       EQU         $960                    ; Scrap manager variables [32 bytes]
 ScrapInfo       EQU         $960                    ; Scrap length [long]
 ScrapTag        EQU         $970                    ; Scrap file name

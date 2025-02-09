@@ -197,6 +197,14 @@ __InitGraf       EQU        $A86E
         dc.w    $A8B4
     endm
 
+    macro _Dequeue
+        dc.w    $A96E
+    endm
+
+    macro _Enqueue
+        dc.w    $A96F
+    endm
+
     macro _InitResources
         dc.w    $A995
     endm

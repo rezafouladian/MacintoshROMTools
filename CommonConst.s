@@ -15,4 +15,11 @@ sleepSig        EQU         'MATT'
 SleepDemand     EQU         2
 SleepWakeUp     EQU         3
 SleepUnlock     EQU         4
+SleepDeny       EQU         5
 SleepNow        EQU         6
+
+ioQElSize       EQU         $32
+
+noATChg         EQU         6
+
+HasCharger      EQU         0
