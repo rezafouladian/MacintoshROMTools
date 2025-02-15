@@ -1,13 +1,20 @@
+    ; Jump to an address, storing the return address in A6
     macro BSR6
         lea .\@,A6
         jmp (\1,PC)
     .\@:
     endm
     
+    ; Branch to an address, storing the return address in A6
     macro BRA6
         lea .\@,A6
         bra (\1)
     .\@:
+    endm
+
+    ; Return using the address stored in A6 from BSR6
+    macro RTS6
+        jmp (A6)
     endm
 
     macro BigLea

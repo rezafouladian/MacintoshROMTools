@@ -213,6 +213,10 @@ __InitGraf       EQU        $A86E
         dc.w    $A9A0
     endm
 
+    macro _GetNamedResource
+        dc.w    $A9A1
+    endm
+
     macro _InternalWait
         dc.w    $A07F
     endm
