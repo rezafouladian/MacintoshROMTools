@@ -10,6 +10,10 @@
         dc.w    $A004
     endm
 
+    macro _MountVol
+        dc.w    $A00F
+    endm
+
     macro _InitZone
         dc.w    $A019
     endm
@@ -177,8 +181,24 @@ __InitGraf       EQU        $A86E
         dc.w    $A89E
     endm
 
+    macro _FrameRect
+        dc.w    $A8A1
+    endm
+
+    macro _EraseRect
+        dc.w    $A8A3
+    endm
+
+    macro _PaintRect
+        dc.w    $A8A3
+    endm
+
     macro _FillRect
         dc.w    $A8A5
+    endm
+
+    macro _SetRect
+        dc.w    $A8A7
     endm
 
     macro _InsetRect
@@ -215,6 +235,14 @@ __InitGraf       EQU        $A86E
 
     macro _GetNamedResource
         dc.w    $A9A1
+    endm
+
+    macro _ReleaseResource
+        dc.w    $A9A3
+    endm
+
+    macro _SizeRsrc
+        dc.w    $A9A5
     endm
 
     macro _InternalWait

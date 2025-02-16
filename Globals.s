@@ -33,6 +33,7 @@ KeyRepTime      EQU         $18A                    ; Tick count when key was la
 KeyThresh       EQU         $18E                    ; Threshold for key repeat [word]
 KeyRepThresh    EQU         $190
 Lvl1DT          EQU         $192                    ; Interrupt level 1 dispatch table [32 bytes]
+Lvl2DT			EQU 		$1B2                    ; Interrupt level 2 dispatch table [32 bytes]
 UnitNtryCnt     EQU         $1D2                    ; Count of entries in unit table [word]
 VIA             EQU         $1D4                    ; VIA base pointer [pointer]
 SCCRd           EQU         $1D8                    ; SCC base read address [pointer]
@@ -74,6 +75,7 @@ ROMBase         EQU         $2AE                    ; ROM base address [pointer]
 RAMBase         EQU         $2B2                    ; RAM base address [pointer]
 ExpandMem       EQU         $2B6                    ; Pointer to expanded memory block
 DSAlertTab      EQU         $2BA                    ; System error alerts [pointer]
+ExtStsDT  		EQU 		$2BE  					; SCC ext/sts secondary dispatch table [16 bytes]
 DoubleTime      EQU         $2F0                    ; Double-click ticks [long]
 CaretTime       EQU         $2F4                    ; Caret-blink ticks [long]
 TagData         EQU         $2FA                    ; Sector tag info for disk drivers [14 bytes]

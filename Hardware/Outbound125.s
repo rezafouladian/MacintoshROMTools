@@ -57,3 +57,6 @@ ifIRQ 			EQU 		7
 
 SCCRBase        EQU         $9FFFFE
 SCCWBase        EQU         $BFFFF9
+
+FloppyEEPROM    EQU         1
+HardDiskEEPROM  EQU         2
