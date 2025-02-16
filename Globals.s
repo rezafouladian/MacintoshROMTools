@@ -108,6 +108,7 @@ CrsrNew         EQU         $8CE
 MouseMask       EQU         $8D6
 WidthListHand   EQU         $8E4                    ; List of extra width tables, or nil
 CrsrThresh      EQU         $8EC                    ; Delta threshold for mouse scaling [word]
+JCrsrTask       EQU         $8EE
 WWExist         EQU         $8F2                    ; Window manager initialized? [byte]
 QDExist         EQU         $8F3                    ; Quickdraw is initialized? [byte]
 JFetch          EQU         $8F4
