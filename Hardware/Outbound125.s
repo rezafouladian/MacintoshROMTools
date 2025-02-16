@@ -45,6 +45,9 @@ SCSI_Base       EQU         $580000
 SCSIRd          EQU         $580000
 SCSIWr          EQU         $580001
 SCSI_ICRwrite   EQU         $580011
+MacSCSIBase   	EQU 		$5FF000   				; base addr SCSI READ interface
+MacSCSIDMA		EQU 		$5FF200   				; base addr SCSI DMA
+MacSCSIHsk		EQU 		$5FF200   				; base addr SCSI handshake
 ; SCSI Offsets
                 INCLUDE     'SCSI.s'
 
