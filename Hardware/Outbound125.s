@@ -29,6 +29,13 @@ OutboundHDBase  EQU         $C00000                 ; Outbound internal HD
 OutboundFlpBase EQU         $C80000                 ; Outbound internal floppy
 OutboundPwrCtl  EQU         $E00000                 ; Battery and contrast
 
+FloppyEEPROM    EQU         1                       ; Resource ID for Floppy EEPROM
+HardDiskEEPROM  EQU         2                       ; Resource ID for Hard Disk EEPROM
+
+PlusROMVersion  EQU         $75
+UnknownROM      EQU         $176
+SEROMVersion    EQU         $276
+
 
 ; Host SE or Plus Hardware
 
@@ -39,8 +46,7 @@ SCSIRd          EQU         $580000
 SCSIWr          EQU         $580001
 SCSI_ICRwrite   EQU         $580011
 ; SCSI Offsets
-sICR            EQU         $10
-sCSR            EQU         $40
+                INCLUDE     'SCSI.s'
 
 VBase           EQU         $EFE1FE
                 INCLUDE     'VIA.s'                 ; Include VIA offsets
@@ -58,9 +64,4 @@ ifIRQ 			EQU 		7
 SCCRBase        EQU         $9FFFFE
 SCCWBase        EQU         $BFFFF9
 
-FloppyEEPROM    EQU         1                       ; Resource ID for Floppy EEPROM
-HardDiskEEPROM  EQU         2                       ; Resource ID for Hard Disk EEPROM
-
-PlusROMVersion  EQU         $75
-UnknownROM      EQU         $176
-SEROMVersion    EQU         $276
+                INCLUDE     'IWM.s'
