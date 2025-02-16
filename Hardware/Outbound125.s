@@ -21,7 +21,7 @@ CfgBit6         EQU         6
 CfgBit7         EQU         7
 OutboundCfg2    EQU         $707D09                 ; A second config space?
 Cfg2Bit0        EQU         0
-Cfg2Bit1        EQU         1
+HDPresent       EQU         1
 
 ; Mostly unconfirmed memory map spaces
 RAMDiskBase     EQU         $600000                 ; Outbound RAM disk
@@ -58,8 +58,8 @@ ifIRQ 			EQU 		7
 SCCRBase        EQU         $9FFFFE
 SCCWBase        EQU         $BFFFF9
 
-FloppyEEPROM    EQU         1
-HardDiskEEPROM  EQU         2
+FloppyEEPROM    EQU         1                       ; Resource ID for Floppy EEPROM
+HardDiskEEPROM  EQU         2                       ; Resource ID for Hard Disk EEPROM
 
 PlusROMVersion  EQU         $75
 UnknownROM      EQU         $176
