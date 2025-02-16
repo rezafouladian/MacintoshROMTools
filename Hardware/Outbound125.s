@@ -39,6 +39,8 @@ SEROMVersion    EQU         $276
 EEPROMReg1      EQU         $50000F                 ; Enables writing to the EEPROM?
 EEPROMReg2      EQU         $500007                 ; Enables writing to the EEPROM?
 
+EEPROMWrite     EQU         $7C0000
+
 
 ; Host SE or Plus Hardware
 
