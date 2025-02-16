@@ -60,3 +60,7 @@ SCCWBase        EQU         $BFFFF9
 
 FloppyEEPROM    EQU         1
 HardDiskEEPROM  EQU         2
+
+PlusROMVersion  EQU         $75
+UnknownROM      EQU         $176
+SEROMVersion    EQU         $276
