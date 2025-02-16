@@ -6,6 +6,7 @@ VBase           EQU         $EFE1FE
                 INCLUDE     'VIA.s'
 
 DBase           EQU         $DFE1FF
+                INCLUDE     'IWM.s'
 
 SCSIRd			EQU 		$5FF000   				; base addr SCSI interface - READ
 SCSIWr			EQU 		$5FF001   				; base addr SCSI interface - WRITE
