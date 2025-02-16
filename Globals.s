@@ -93,6 +93,7 @@ NoEject         EQU         $34B
 FSFCBLen        EQU         $3F6                    ; HFS present flag
 DSAlertRect     EQU         $3F8                    ; Rectanble for DS alert [8 bytes]
 JADBProc        EQU         $6B8
+GrafBegin       EQU         $800
 JCrsrObscure    EQU         $81C
 ScrnBase        EQU         $824                    ; Screen base [pointer]
 MTemp           EQU         $828
@@ -109,6 +110,7 @@ MouseMask       EQU         $8D6
 WidthListHand   EQU         $8E4                    ; List of extra width tables, or nil
 CrsrThresh      EQU         $8EC                    ; Delta threshold for mouse scaling [word]
 JCrsrTask       EQU         $8EE
+GrafEnd   		EQU 		$8F2  					; End of graphics globals
 WWExist         EQU         $8F2                    ; Window manager initialized? [byte]
 QDExist         EQU         $8F3                    ; Quickdraw is initialized? [byte]
 JFetch          EQU         $8F4
