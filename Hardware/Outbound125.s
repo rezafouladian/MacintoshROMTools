@@ -36,6 +36,9 @@ PlusROMVersion  EQU         $75
 UnknownROM      EQU         $176
 SEROMVersion    EQU         $276
 
+EEPROMReg1      EQU         $50000F                 ; Enables writing to the EEPROM?
+EEPROMReg2      EQU         $500007                 ; Enables writing to the EEPROM?
+
 
 ; Host SE or Plus Hardware
 
