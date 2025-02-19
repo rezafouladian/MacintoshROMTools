@@ -113,6 +113,10 @@
     macro _NewPtr
         dc.w    $A11E
     endm
+
+    macro _Gestalt
+        dc.w    $A1AD
+    endm
     
     macro _SetOSTrapAddress
         dc.w    $A247
@@ -169,7 +173,7 @@ __InitGraf       EQU        $A86E
         dc.w    $A86F
     endm
 
-    macro _Shutdown
+    macro _ShutDown
         dc.w    $A895
     endm
 
