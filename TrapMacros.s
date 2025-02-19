@@ -2,16 +2,44 @@
         dc.w    $A000
     endm
 
+    macro _Close
+        dc.w    $A001
+    endm
+
     macro _Read
         dc.w    $A002
+    endm
+
+    macro _Write
+        dc.w    $A003
     endm
     
     macro _Control
         dc.w    $A004
     endm
 
+    macro _Status
+        dc.w    $A005
+    endm
+
+    macro _Create
+        dc.w    $A008
+    endm
+
+    macro _GetFileInfo
+        dc.w    $A00C
+    endm
+    
+    macro _SetFileInfo
+        dc.w    $A00D
+    endm
+    
     macro _MountVol
         dc.w    $A00F
+    endm
+
+    macro _Eject
+        dc.w    $A017
     endm
 
     macro _InitZone
@@ -110,10 +138,13 @@
         dc.w    $A085
     endm
 
+GestaltTrap     EQU         $A0AD
+
     macro _NewPtr
         dc.w    $A11E
     endm
 
+GestaltTrapID   EQU         $A1AD     
     macro _Gestalt
         dc.w    $A1AD
     endm
@@ -133,6 +164,10 @@
 __SetToolBoxTrapAddress EQU $A647
     macro _SetToolBoxTrapAddress
         dc.w    $A647
+    endm
+
+    macro _HFSDispatch_async
+        dc.w    $A660
     endm
 
     macro _NewPtrSysClear
@@ -164,13 +199,22 @@ __GetToolBoxTrapAddress EQU $A746
         dc.w    $A853
     endm
 
-__InitGraf       EQU        $A86E
+    macro _BitTst
+        dc.w    $A85D
+    endm
+
+__InitGraf      EQU        $A86E
     macro _InitGraf
         dc.w    $A86E
     endm
 
     macro _OpenPort
         dc.w    $A86F
+    endm
+
+OSDispatchTrap  EQU         $A88F
+    macro _OSDispatch
+        dc.w    $A88F
     endm
 
     macro _ShutDown
@@ -211,6 +255,11 @@ sdSoftOff       EQU         6
 
     macro _PenNormal
         dc.w    $A89E
+    endm
+
+Unimplemented   EQU     $A89F
+    macro _Unimplemented
+        dc.w    $A89F
     endm
 
     macro _FrameRect
@@ -255,6 +304,10 @@ sdSoftOff       EQU         6
 
     macro _Enqueue
         dc.w    $A96F
+    endm
+    
+    macro _GetKeys
+        dc.w    $A976
     endm
 
     macro _InitResources

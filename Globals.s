@@ -40,6 +40,7 @@ SCCRd           EQU         $1D8                    ; SCC base read address [poi
 SCCWr           EQU         $1DC                    ; SCC base write address [pointer]
 IWM             EQU         $1E0                    ; IWM base pointer [pointer]
 Scratch20       EQU         $1E4                    ; System parameter scratch [20 bytes]
+SPConfig  		EQU 		$1FB  					; Config bits: 4-7 A, 0-3 B (see use type below)
 SPKbd           EQU         $206                    ; Keyboard repeat threshold in 4/60ths [2 4-bit]
 SPClikCaret     EQU         $209                    ; Double-click and caret-blink times [byte]
 TimeLM          EQU         $20C
@@ -47,6 +48,7 @@ BootDrive       EQU         $210                    ; Drive number of boot drive
 JShell          EQU         $212                    ; Journaling shell state [word]
 SFSaveDisk      EQU         $214                    ; Last vRefNum seen by standard file [word]
 JKybdTask       EQU         $21A                    ; Keyboard VBL task hook [pointer]
+KbdType   		EQU 		$21E  					; Keyboard model number [byte]
 AlarmSt         EQU         $21F
 AlarmState      EQU         $21F
 MemErr          EQU         $220
@@ -76,6 +78,7 @@ RAMBase         EQU         $2B2                    ; RAM base address [pointer]
 ExpandMem       EQU         $2B6                    ; Pointer to expanded memory block
 DSAlertTab      EQU         $2BA                    ; System error alerts [pointer]
 ExtStsDT  		EQU 		$2BE  					; SCC ext/sts secondary dispatch table [16 bytes]
+ABusDCE   		EQU 		$2DC  					; Pointer to AppleTalk DCE
 DoubleTime      EQU         $2F0                    ; Double-click ticks [long]
 CaretTime       EQU         $2F4                    ; Caret-blink ticks [long]
 TagData         EQU         $2FA                    ; Sector tag info for disk drivers [14 bytes]
@@ -117,6 +120,7 @@ JFetch          EQU         $8F4
 JIODone         EQU         $8FC
 CurApRefNum     EQU         $900                    ; RefNum of Application's resFile [word]
 LaunchFlag      EQU         $902                    ; From launch or chain [byte]
+CurrentA5 		EQU 		$904  					; Current value of A5 [pointer]
 SaveSegHandle   EQU         $930
 CurJTOffset     EQU         $934                    ; Current jump table offset [word]
 CurPageOption   EQU         $936                    ; Current page 2 configuration [word]

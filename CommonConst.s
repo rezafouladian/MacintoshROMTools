@@ -23,3 +23,10 @@ ioQElSize       EQU         $32
 noATChg         EQU         6
 
 HasCharger      EQU         0
+
+PlusROMVersion  EQU         $75
+UnknownROM      EQU         $176                    ; A ROM identifier that may exist but I am not sure what it is
+SEROMVersion    EQU         $276
+
+ioWDProcID		EQU 		$1C   					; WD's ProcID [long]
+SysWDProcID		EQU 		'ERIK'   			    ; For use with OpenWD

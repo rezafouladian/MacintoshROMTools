@@ -32,10 +32,6 @@ OutboundPwrCtl  EQU         $E00000                 ; Battery and contrast
 FloppyEEPROM    EQU         1                       ; Resource ID for Floppy EEPROM
 HardDiskEEPROM  EQU         2                       ; Resource ID for Hard Disk EEPROM
 
-PlusROMVersion  EQU         $75
-UnknownROM      EQU         $176
-SEROMVersion    EQU         $276
-
 EEPROMReg1      EQU         $50000F                 ; Enables writing to the EEPROM?
 EEPROMReg2      EQU         $500007                 ; Enables writing to the EEPROM?
 
