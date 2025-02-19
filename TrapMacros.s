@@ -177,6 +177,34 @@ __InitGraf       EQU        $A86E
         dc.w    $A895
     endm
 
+sdInit          EQU         0
+sdPowerOff      EQU         1
+sdRestart       EQU         2
+sdInstall       EQU         3
+sdRemove        EQU         4
+sdUserChoice    EQU         5
+sdSoftOff       EQU         6
+
+    macro _SDPowerOff
+        move.w  #sdPowerOff,-(SP)
+        _ShutDown
+    endm
+
+    macro _SDRestart
+        move.w  #sdRestart,-(SP)
+        _ShutDown
+    endm
+
+    macro _SDInstall
+        move.w  #sdInstall,-(SP)
+        _ShutDown
+    endm
+
+    macro _SDRemove
+        move.w  #sdRemove,-(SP)
+        _ShutDown
+    endm
+
     macro _PenSize
         dc.w    $A89B
     endm
