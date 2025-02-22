@@ -151,6 +151,7 @@ ResErrProc      EQU         $AF2                    ; Reference number of curren
 PWMBuf1         EQU         $B0A
 BootMask        EQU         $B0E
 WidthPtr        EQU         $B10                    ; Font manager global [long]
+LAPMgrPtr  	 	EQU 	    $B18                    ; This points to start of LapMgr
 HWCfgFlags      EQU         $B22
 hwCbSCSI        EQU         15                      ; SCSI port present
 hwCbClock       EQU         14
@@ -165,35 +166,64 @@ WidthTabHandle  EQU         $B2A
 TimeVars        EQU         $B30
 BtDskRfn        EQU         $B34
 NTSC            EQU         $B3E
+jDiskSel        EQU         $B40
+jSendCmd        EQU         $B44
+jDCDReset       EQU         $B48
+LastSPExtra     EQU         $B4C
+MenuDisable     EQU         $B54
 ROMMapInsert    EQU         $B9E
 WordRedraw      EQU         $BA5                    ; Used by TextEdit RecalDraw [byte]
 SysFontFam      EQU         $BA6
 TESysJust       EQU         $BAC                    ; System justification [word]
+LastFOND        EQU         $BC2
+FONDID          EQU         $BC6
+App2Packs       EQU         $BC8
 SCSIBase        EQU         $C00
 SCSIDMA         EQU         $C04
 SCSIHsk         EQU         $C08
+RGBBlack        EQU         $C10
+RGBWhite        EQU         $C16
 RowBits         EQU         $C20
 ColLines        EQU         $C22
 ScreenBytes     EQU         $C24
 IOPMgrVars      EQU         $C28
 NMIFlag         EQU         $C2C
 SCSIPoll        EQU         $C2F
+SEVarBase       EQU         $C30
+SEPC            EQU         $C70
+SESR            EQU         $C74
+SECmdSiz        EQU         $C7A
+MBdotAddr       EQU         $CA8
+MBlocAddr       EQU         $CAC
 MMUType         EQU         $CB1
 BoxFlag         EQU         $CB3
 WhichBox        EQU         $CB3
 ASCBase         EQU         $CC0
 SMGlobals       EQU         $CC4
+TheGDevice      EQU 		$CC8 					; The current graphics device [long]
+AuxWinHead      EQU         $CD0
+AuxCtlHead      EQU         $CD4
+TimeVIADB       EQU         $CEA
 ADBDelay        EQU         $CEA
 VIA2            EQU         $CEC
 ADBBase         EQU         $CF8
 WarmStart       EQU         $CFC
 TimeDBRA        EQU         $D00                    ; Number of times the DBRA instruction can be executed per millisecond [word]
 TimeSCCDB       EQU         $D02                    ; Number of times the SCC can be accessed per millisecond [word]
+PmgrBase        EQU         $D18
 PowerMgrVars    EQU         $D18
 TableSeed       EQU         $D20                    ; Seed value for color table ID's [long]
 VertRRate       EQU         $D30
+SynListHandle   EQU         $D32
+FMExist         EQU         $D42
+ChunkyDepth     EQU         $D60
+CrsrPtr         EQU         $D62
+PortList        EQU         $D66
 MickeyBytes     EQU         $D6A
 JDTInstall      EQU         $D9C                    ; Pointer to deferred task install routine [long]
+DSCtrAdj        EQU         $DA8
+IconTLAddr      EQU         $DAC
+VideoInfoOK     EQU         $DB0
 JSwapMMU        EQU         $DBC                    ; Jump vector to SwapMMU routine [long]
 AddrMapFlags    EQU         $DD0                    ; Valid bits for base addresses 0-31 (universal ROM) [long]
 UnivROMFlags    EQU         $DD4                    ; Product specific flags for universal ROM [long]
