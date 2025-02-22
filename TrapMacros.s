@@ -106,6 +106,10 @@
         dc.w    $A058
     endm
 
+    macro _SwapMMUMode
+        dc.w    $A05D
+    endm
+
     macro _NMInstall
         dc.w    $A05E
     endm

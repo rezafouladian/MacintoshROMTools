@@ -26,3 +26,10 @@
         lea (\1-*).l,\2
         jsr (*-6,PC,\2.l)
     endm
+
+    macro BigBSR6
+        lea .\@,A6
+        lea (\1-*).l,A0
+        jmp (*-6,PC,A0.l)
+    .\@:
+    endm
