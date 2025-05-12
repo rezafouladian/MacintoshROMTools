@@ -70,6 +70,18 @@
         dc.w    $A035
     endm
 
+    macro _WriteParam
+        dc.w    $A038
+    endm
+
+    macro _ReadDateTime
+        dc.w    $A039
+    endm
+
+    macro _SetDateTime
+        dc.w    $A03A
+    endm
+
     macro _Delay
         dc.w    $A03B
     endm
@@ -314,6 +326,10 @@ Unimplemented   EQU     $A89F
         dc.w    $A976
     endm
 
+    macro _Alert
+        dc.w    $A985
+    endm
+
     macro _InitResources
         dc.w    $A995
     endm
@@ -332,6 +348,10 @@ Unimplemented   EQU     $A89F
 
     macro _SizeRsrc
         dc.w    $A9A5
+    endm
+
+    macro _SecondsToDate
+        dc.w    $A9C6
     endm
 
     macro _InternalWait

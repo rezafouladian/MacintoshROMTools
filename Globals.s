@@ -43,6 +43,7 @@ Scratch20       EQU         $1E4                    ; System parameter scratch [
 SPConfig  		EQU 		$1FB  					; Config bits: 4-7 A, 0-3 B (see use type below)
 SPKbd           EQU         $206                    ; Keyboard repeat threshold in 4/60ths [2 4-bit]
 SPClikCaret     EQU         $209                    ; Double-click and caret-blink times [byte]
+SPMisc1         EQU         $20A
 TimeLM          EQU         $20C
 BootDrive       EQU         $210                    ; Drive number of boot drive [word]
 JShell          EQU         $212                    ; Journaling shell state [word]
@@ -93,6 +94,8 @@ EjectNotify     EQU         $338                    ; Eject notify procedure [po
 IAZNotify       EQU         $33C                    ; Word swaps notify procedure [pointer]
 FlushOnly       EQU         $346
 NoEject         EQU         $34B
+CacheFlag       EQU         $377
+CacheVars       EQU         $394
 FSFCBLen        EQU         $3F6                    ; HFS present flag
 DSAlertRect     EQU         $3F8                    ; Rectanble for DS alert [8 bytes]
 JADBProc        EQU         $6B8

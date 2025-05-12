@@ -18,7 +18,8 @@ SleepUnlock     EQU         4
 SleepDeny       EQU         5
 SleepNow        EQU         6
 
-ioQElSize       EQU         $32
+ioQElSize       EQU         50                      ; Length of I/O parameter block
+ioMisc          EQU         $1C
 
 noATChg         EQU         6
 
@@ -30,3 +31,7 @@ SEROMVersion    EQU         $276
 
 ioWDProcID		EQU 		$1C   					; WD's ProcID [long]
 SysWDProcID		EQU 		'ERIK'   			    ; For use with OpenWD
+
+OldBufPtr       EQU         $4                      ; Set to pre-cache value of BufPtr [long]
+NewBufPtr       EQU         $8                      ; Set to bottom of cache [long]
+CacheMinZn      EQU         $20                     ; Minimum application zone size [long]
