@@ -154,6 +154,10 @@
         dc.w    $A085
     endm
 
+    macro _Sleep
+        dc.w    $A08A
+    endm
+
 GestaltTrap     EQU         $A0AD
 
     macro _NewPtr
@@ -163,6 +167,10 @@ GestaltTrap     EQU         $A0AD
 GestaltTrapID   EQU         $A1AD     
     macro _Gestalt
         dc.w    $A1AD
+    endm
+
+    macro _HGetVInfo
+        dc.w    $A207
     endm
     
     macro _SetOSTrapAddress

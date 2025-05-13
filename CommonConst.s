@@ -5,6 +5,8 @@ InterruptBit2   EQU         10
 Supervisor      EQU         13
 TraceBit        EQU         15                      ; Trace bit. When set, execute trace exception after every instruction
 
+HiIntMask       EQU         $300
+
 TROMCode        EQU         $55AAAA55               ; Magic bytes to identify test ROM
 
 GRAFPROCS       EQU         $68
@@ -19,7 +21,7 @@ SleepDeny       EQU         5
 SleepNow        EQU         6
 
 ioQElSize       EQU         50                      ; Length of I/O parameter block
-ioMisc          EQU         $1C
+ioMisc          EQU         $1C                     ; [pointer]
 
 noATChg         EQU         6
 
@@ -35,3 +37,10 @@ SysWDProcID		EQU 		'ERIK'   			    ; For use with OpenWD
 OldBufPtr       EQU         $4                      ; Set to pre-cache value of BufPtr [long]
 NewBufPtr       EQU         $8                      ; Set to bottom of cache [long]
 CacheMinZn      EQU         $20                     ; Minimum application zone size [long]
+
+pmBusyErr       EQU         -13000                  ; Power Manager never ready to start handshake
+pmReplyTOErr    EQU         -13001
+pmSendStartErr  EQU         -13002
+pmSendEndErr    EQU         -13003
+pmRecvStartErr  EQU         -13004
+pmRecvEndErr    EQU         -13005
