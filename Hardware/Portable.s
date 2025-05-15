@@ -39,3 +39,13 @@ NTSCmode        EQU         2
 
 MaxRAMSize      EQU         $900000
 SlimSpaceSize   EQU         $400000
+
+slimAdapterROM  EQU         $E00000
+
+RomDiskAlign    EQU         $64*1024                ; 64KB alignment
+RomSpaceEnd     EQU         $E00000
+
+slim0RamBase    EQU         $500000
+slim1RamBase    EQU         $700000
+slim0RegBase    EQU         $F00000
+slim1RegBase    EQU         $F00030

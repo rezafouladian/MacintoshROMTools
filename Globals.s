@@ -248,6 +248,7 @@ DockingGlobals  EQU         $1FF8                   ; Pointer to docking globals
 ; 68000 Vectors
 ResetStackPtr   EQU         $0                      ; 
 ResetVector     EQU         $4
+BusErrorVector  EQU         $8
 IllegalInstructionVector    EQU $10
 TraceVector     EQU         $24
 LineAVector     EQU         $28
