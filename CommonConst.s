@@ -44,3 +44,29 @@ pmSendStartErr  EQU         -13002
 pmSendEndErr    EQU         -13003
 pmRecvStartErr  EQU         -13004
 pmRecvEndErr    EQU         -13005
+
+dqDrvSz         EQU         $C
+
+dCtlStorage     EQU         $14
+
+Active          EQU         $10
+
+ioDrvNum        EQU         $16
+
+CheckSumPtr     EQU         -36
+DataEndPtr      EQU         -28
+DiskInPlace     EQU         -3
+DQDrive         EQU         6
+DQRefNum        EQU         8
+EDiskVarsSize   EQU         $144                    ; Size of global variables used by driver
+                                                    ; Temporary hard coded size
+
+CheckEDiskInserted  EQU     0
+CheckEDiskReadOnly  EQU     1
+EnableEDiskWrites   EQU     2
+DisableEDiskWrites  EQU     3
+EjectEDisk          EQU     4
+
+csParam         EQU         $1C
+
+DCEPointer      EQU         $C

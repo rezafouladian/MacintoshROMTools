@@ -49,3 +49,4 @@ slim0RamBase    EQU         $500000
 slim1RamBase    EQU         $700000
 slim0RegBase    EQU         $F00000
 slim1RegBase    EQU         $F00030
+slimStatusReg   EQU         $0                      ; Offset to SLIM status register

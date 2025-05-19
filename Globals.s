@@ -44,6 +44,7 @@ SPConfig  		EQU 		$1FB  					; Config bits: 4-7 A, 0-3 B (see use type below)
 SPKbd           EQU         $206                    ; Keyboard repeat threshold in 4/60ths [2 4-bit]
 SPClikCaret     EQU         $209                    ; Double-click and caret-blink times [byte]
 SPMisc1         EQU         $20A
+Time            EQU         $20C
 TimeLM          EQU         $20C
 BootDrive       EQU         $210                    ; Drive number of boot drive [word]
 JShell          EQU         $212                    ; Journaling shell state [word]
