@@ -25,6 +25,7 @@ RAMconfigBase   EQU         $FE0200                 ; Internal/external RAM conf
 MapperBase      EQU         $FC0000                 ; Mapper RAM base address
 
 AccessBase      EQU         $FC0200
+slimsInstalled  EQU         3
 
 Video_Base      EQU         $FA8000
 ScreenLow       EQU         $FA8000
@@ -50,3 +51,9 @@ slim1RamBase    EQU         $700000
 slim0RegBase    EQU         $F00000
 slim1RegBase    EQU         $F00030
 slimStatusReg   EQU         $0                      ; Offset to SLIM status register
+slimReadOnly    EQU         2
+slimInserted    EQU         3
+slimEjectReg    EQU         $20
+slimNotEjecting EQU         3
+slimProtectReg  EQU         $30
+slimNoWrites    EQU         3

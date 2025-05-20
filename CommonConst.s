@@ -53,11 +53,23 @@ Active          EQU         $10
 
 ioDrvNum        EQU         $16
 
+SLIMRegPtr      EQU         -56
+HWDepProcPtr    EQU         -52
+HeaderInfoPtr   EQU         -48
+FormatTime      EQU         -44
+FormatTicks     EQU         -40
 CheckSumPtr     EQU         -36
+DataStartPtr    EQU         -32
 DataEndPtr      EQU         -28
+MediaIconPtr    EQU         -24
+DriveIconPtr    EQU         -20
+WhereStringPtr  EQU         -16
+DriveInfo       EQU         -12
+
 DiskInPlace     EQU         -3
-DQDrive         EQU         6
-DQRefNum        EQU         8
+dQDrive         EQU         6
+dqRefNum        EQU         8
+dQDrvSz         EQU         $C
 EDiskVarsSize   EQU         $144                    ; Size of global variables used by driver
                                                     ; Temporary hard coded size
 
