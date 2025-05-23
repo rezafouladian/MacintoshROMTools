@@ -4,6 +4,13 @@
         jmp (\1,PC)
     .\@:
     endm
+
+    ; Jump to an address, storing the return address in A5
+    macro BSR6
+        lea .\@,A5
+        jmp (\1,PC)
+    .\@:
+    endm
     
     ; Branch to an address, storing the return address in A6
     macro BRA6
