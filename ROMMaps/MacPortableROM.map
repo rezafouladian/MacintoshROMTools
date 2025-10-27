@@ -1,273 +1,273 @@
-BaseOfROM 900000 label
-DispOff 900022 label
-Critical 900026 function
-StartBoot 900058 function
-StartInit1 900096 function
-BootRetry 90011C function
-JmpTblInit 900224 function
-JmpTbl2 900226 function
-FillWithOnes 900234 function
-CompBootStack 900244 function
-SetUpSysAppZone 900252 function
-DrawBeepScreen 900290 function
-InitShutdownMgr 90031C function
-InitPmgrVars 900322 function
-InitADBVars 900416 function
-InitHiMemGlobals 900440 function
-InitGlobalVars 900460 function
-SwitchGoodies 900524 label
-WDCBSwOS 90055C label
-PMSPSwOS 90055E label
-InitSwitcherTable 900560 function
-GetPRAM 900574 function
-WhichCPU 9005B2 function
-WhichBoard 9005F0 function
-SetUpTimeK 90060C function
-InitSCSIGlobals 900718 function
-InitSCSI 900732 function
-InitIWMGlobals 90074A function
-InitIWM 900754 function
-InitVIAGlobals 900794 function
-InitVIA 90079E function
-VIATimerEnables 9007C0 function
-InitSCCGlobals 9007D4 function
-Gary 9007EA label
-InitSCC 900808 function
-WriteSCC 900826 function
-InitVidGlobals 900836 function
-InitCrsrVars 90087A function
-InitCrsrMgr 90088A function
-InitIOMgr 900902 function
-InitMemMgr 900970 function
-InitRsrcMgr 90098E function
-InitDTQueue 90099E function
-GOOFYDoEject 9009B0 function
-StartTest 9009BA label
-StartTest1 900BBC function
-ROMChk 900C5C label
-TJump 900E5E label
-MaxTest 900E6E label
-NJump 900E70 label
-MaxNTst 900E86 label
-PostProc 900E88 label
-GoTM 900E88 function
-RAMTest 900E96 function
-Error2Handler 900EBE function
-Error1Handler 900EBE function
-Error3Handler 900F22 function
-Error4Handler 900F3C function
-NCErrorHandler 900F56 function
-TMProc 900FB0 label
-TestManager 900FB0 function
-TMRestart 9012D0 function
-TMEntry0 9012D0 function
-TMEntry1 9012D4 function
-DoCritTest 901648 function
-DoNonCritTest 9016FC function
-EchoCmd 9017CC function
-a1MsgLength 901872 label
-a1Msg 901873 label
-b1MsgLength 90187A label
-b1Msg 90187B label
-GetChar 9018A2 function
-CvtAscii 901906 function
-SetupBases 9019F8 function
+BaseOfROM 900000 l
+DispOff 900022 l
+Critical 900026 f
+StartBoot 900058 f
+StartInit1 900096 f
+BootRetry 90011C f
+JmpTblInit 900224 f
+JmpTbl2 900226 f
+FillWithOnes 900234 f
+CompBootStack 900244 f
+SetUpSysAppZone 900252 f
+DrawBeepScreen 900290 f
+InitShutdownMgr 90031C f
+InitPmgrVars 900322 f
+InitADBVars 900416 f
+InitHiMemGlobals 900440 f
+InitGlobalVars 900460 f
+SwitchGoodies 900524 l
+WDCBSwOS 90055C l
+PMSPSwOS 90055E l
+InitSwitcherTable 900560 f
+GetPRAM 900574 f
+WhichCPU 9005B2 f
+WhichBoard 9005F0 f
+SetUpTimeK 90060C f
+InitSCSIGlobals 900718 f
+InitSCSI 900732 f
+InitIWMGlobals 90074A f
+InitIWM 900754 f
+InitVIAGlobals 900794 f
+InitVIA 90079E f
+VIATimerEnables 9007C0 f
+InitSCCGlobals 9007D4 f
+Gary 9007EA l
+InitSCC 900808 f
+WriteSCC 900826 f
+InitVidGlobals 900836 f
+InitCrsrVars 90087A f
+InitCrsrMgr 90088A f
+InitIOMgr 900902 f
+InitMemMgr 900970 f
+InitRsrcMgr 90098E f
+InitDTQueue 90099E f
+GOOFYDoEject 9009B0 f
+StartTest 9009BA l
+StartTest1 900BBC f
+ROMChk 900C5C l
+TJump 900E5E l
+MaxTest 900E6E l
+NJump 900E70 l
+MaxNTst 900E86 l
+PostProc 900E88 l
+GoTM 900E88 f
+RAMTest 900E96 f
+Error2Handler 900EBE f
+Error1Handler 900EBE f
+Error3Handler 900F22 f
+Error4Handler 900F3C f
+NCErrorHandler 900F56 f
+TMProc 900FB0 l
+TestManager 900FB0 f
+TMRestart 9012D0 f
+TMEntry0 9012D0 f
+TMEntry1 9012D4 f
+DoCritTest 901648 f
+DoNonCritTest 9016FC f
+EchoCmd 9017CC f
+a1MsgLength 901872 l
+a1Msg 901873 l
+b1MsgLength 90187A l
+b1Msg 90187B l
+GetChar 9018A2 f
+CvtAscii 901906 f
+SetupBases 9019F8 f
 StartTimer 901A62
-WrXByte 901AB8 function
-RdXByte 901AD8 function
-QuasiPwrMgr 901B28 function
-StPwrMgr 901CC4 function
-CritProc 901CD6 function
-DataBusTest 901CD6 function
-StartUpROMTest 901D04 function
-Mod3Test 901D2A function
-RevMod3Test 901E2E function
-RomTest 901F22 function
-ExtRAMTest 901F90 function
-AddrLineTest 901FEE function
+WrXByte 901AB8 f
+RdXByte 901AD8 f
+QuasiPwrMgr 901B28 f
+StPwrMgr 901CC4 f
+CritProc 901CD6 f
+DataBusTest 901CD6 f
+StartUpROMTest 901D04 f
+Mod3Test 901D2A f
+RevMod3Test 901E2E f
+RomTest 901F22 f
+ExtRAMTest 901F90 f
+AddrLineTest 901FEE f
 NOTEST 902064
-NonCritProc 902068 function
-VramAddrTest 902068 function
-VramDataTest 9020E2 function
-MapRamDataTest 90210E function
-MapRamUniqTest 90215A function
-SCCLoopTest 90229A function
-SCCRegTest 902322 function
-SCCTimerTest 90235A function
-VIATest 902444 function
-TestSCSI 9025C2 function
-TestASC 9026A6 function
-PramTest 9027DE function
+NonCritProc 902068 f
+VramAddrTest 902068 f
+VramDataTest 9020E2 f
+MapRamDataTest 90210E f
+MapRamUniqTest 90215A f
+SCCLoopTest 90229A f
+SCCRegTest 902322 f
+SCCTimerTest 90235A f
+VIATest 902444 f
+TestSCSI 9025C2 f
+TestASC 9026A6 f
+PramTest 9027DE f
 PRLOG 9027E2
-FindStartupDevice 9027E2 function
-GetDefaultStartup 902876 function
-SetDefaultStartup 902880 function
-InternalWait 90288A function
-EmbarkOnSearch 9028B2 function
-WaitForInternal 9028D2 function
-LoadDrivers 90295E function
-PlanStrategy 902986 function
-FindNextCandidate 902992 function
-NextDQEntry 9029A6 function
-SelectDevice 9029B6 function
-CheckMouseEject 9029D4 function
-GetStartupInfo 9029E0 function
-ReactToFailure 902A00 function
-VisualUpdate 902A1C function
-EnableXFlash 902A58 function
-ShowSuccess 902A5E function
-EjectMe 902A72 function
-IsReject 902A80 function
-IsItFlopOrDef 902A92 function
-IsItFloppy 902AA6 function
-IsItAnything 902AAE function
-NeverAgain 902AB2 function
-InBootMask 902AC8 function
-ShowDeviceFail 902ADA function
-HappyMac 902AE6 function
-ShowPlainDisk 902AF4 function
-ShowDiskQ 902AFC function
-ShowDiskX 902B04 function
-EraseMyIcon 902B0C function
-PlotMyIcon 902B26 function
+FindStartupDevice 9027E2 f
+GetDefaultStartup 902876 f
+SetDefaultStartup 902880 f
+InternalWait 90288A f
+EmbarkOnSearch 9028B2 f
+WaitForInternal 9028D2 f
+LoadDrivers 90295E f
+PlanStrategy 902986 f
+FindNextCandidate 902992 f
+NextDQEntry 9029A6 f
+SelectDevice 9029B6 f
+CheckMouseEject 9029D4 f
+GetStartupInfo 9029E0 f
+ReactToFailure 902A00 f
+VisualUpdate 902A1C f
+EnableXFlash 902A58 f
+ShowSuccess 902A5E f
+EjectMe 902A72 f
+IsReject 902A80 f
+IsItFlopOrDef 902A92 f
+IsItFloppy 902AA6 f
+IsItAnything 902AAE f
+NeverAgain 902AB2 f
+InBootMask 902AC8 f
+ShowDeviceFail 902ADA f
+HappyMac 902AE6 f
+ShowPlainDisk 902AF4 f
+ShowDiskQ 902AFC f
+ShowDiskX 902B04 f
+EraseMyIcon 902B0C f
+PlotMyIcon 902B26 f
 PLOTICNN 902B3C
 PSHICNRECT 902B8C
-HappyIcon 902BB0 label
-DiskIcon 902CB0 label
-QDiskIcon 902DB0 label
-XDiskIcon 902EB0 label
-iGetTimeOut 902FB0 function
-iSetTimeOut 902FBA function
-iGetWaitFlags 902FD6 function
-iSetWaitFlags 902FE0 function
-iDisableDynWait 902FF6 function
-iEnableDynWait 903008 function
-iDisablePermWait 90301A function
-iEnablePermWait 90302C function
-GetRawTimeout 90303E function
-SetRawTimeout 903050 function
-MyBoot 903060 label
-BootMe 903060 function
-CenterRect 903494 function
-MouseInit 9034C6 function
-InitEvents 903510 function
-CritErr 90353A function
-FailData 9035AA function
-chLoop 9035BE label
-numFont 9035E6 label
-DeadMac 903616 function
-PutSymbol 903644 function
-PutIcon 903654 function
-SysErrInit 90371E function
-Debugger 90375E function
-DebugProlog 90379E function
-ToDeepShit 9037B0 function
-GenExcps 9037F2 function
+HappyIcon 902BB0 l
+DiskIcon 902CB0 l
+QDiskIcon 902DB0 l
+XDiskIcon 902EB0 l
+iGetTimeOut 902FB0 f
+iSetTimeOut 902FBA f
+iGetWaitFlags 902FD6 f
+iSetWaitFlags 902FE0 f
+iDisableDynWait 902FF6 f
+iEnableDynWait 903008 f
+iDisablePermWait 90301A f
+iEnablePermWait 90302C f
+GetRawTimeout 90303E f
+SetRawTimeout 903050 f
+MyBoot 903060 l
+BootMe 903060 f
+CenterRect 903494 f
+MouseInit 9034C6 f
+InitEvents 903510 f
+CritErr 90353A f
+FailData 9035AA f
+chLoop 9035BE l
+numFont 9035E6 l
+DeadMac 903616 f
+PutSymbol 903644 f
+PutIcon 903654 f
+SysErrInit 90371E f
+Debugger 90375E f
+DebugProlog 90379E f
+ToDeepShit 9037B0 f
+GenExcps 9037F2 f
 IRQException 90380A
-SystemError 90380C function
-SysErr1 903812 function
-SysErr2 903822 function
-AllocFakeRgns 90386C function
-DSErrorHandler 9038BA function
-SizeMemory 903EA6 function
-PowerMngr 904014 function
-PmgrInt 90402A function
-EnvInt 904074 function
-BatInt 904080 function
-BatWatch 9040A0 function
-SndWatch 90422E function
-PmgrOp 904274 function
-GoToSleep 9045D6 function
-WakeUp 9046C0 function
-PowerOff 9049D0 function
-SystemBeep 904A18 function
-BootBeep 904A98 function
-ErrorBeep1 904AA8 function
-ErrorBeep2 904AAE function
-ErrorBeep3 904AB4 function
-ErrorBeep4 904ABA function
-CacheProc 904C48 function
-CacheTrap 904C58 function
-QStuff 904D3E label
-Enqueue 904D3E function
-Dequeue 904D64 function
-InitQueue 904DAC function
-Dispatcher 904DB6 label
-EMT1010 904DB6 function
-GetTrapAddress 904F0E function
-SetTrapAddress 904F16 function
-CacheFlush 904F1E function
-vCacheFlush 904F30 function
-InitDispatcher 904F40 function
-BadTrap 904FBA function
-IntHnd 904FC6 function
-InitIntHandler 9051CE function
-DebugUtil 905236 function
-DTCore 90528A label
-DTInstall 90528A function
-DisptchTsk 9052A2 function
-vDisptch 9052A8 function
-VBLCore 9052E4 label
-VInstall 9052E4 function
-VRemove 905334 function
-VBLInt 90534A function
-KBDMngr 9053B8 label
-InitADB 9053B8 function
-FDBShiftInt 905678 function
-ADBOp 9057E0 function
-ADBReInit 905BB8 function
-InitADBDrvr 905BEE function
-ADBProc 905C42 function
-CountADBs 905C7C function
-GetIndADB 905C96 function
-GetADBInfo 905CC2 function
+SystemError 90380C f
+SysErr1 903812 f
+SysErr2 903822 f
+AllocFakeRgns 90386C f
+DSErrorHandler 9038BA f
+SizeMemory 903EA6 f
+PowerMngr 904014 f
+PmgrInt 90402A f
+EnvInt 904074 f
+BatInt 904080 f
+BatWatch 9040A0 f
+SndWatch 90422E f
+PmgrOp 904274 f
+GoToSleep 9045D6 f
+WakeUp 9046C0 f
+PowerOff 9049D0 f
+SystemBeep 904A18 f
+BootBeep 904A98 f
+ErrorBeep1 904AA8 f
+ErrorBeep2 904AAE f
+ErrorBeep3 904AB4 f
+ErrorBeep4 904ABA f
+CacheProc 904C48 f
+CacheTrap 904C58 f
+QStuff 904D3E l
+Enqueue 904D3E f
+Dequeue 904D64 f
+InitQueue 904DAC f
+Dispatcher 904DB6 l
+EMT1010 904DB6 f
+GetTrapAddress 904F0E f
+SetTrapAddress 904F16 f
+CacheFlush 904F1E f
+vCacheFlush 904F30 f
+InitDispatcher 904F40 f
+BadTrap 904FBA f
+IntHnd 904FC6 f
+InitIntHandler 9051CE f
+DebugUtil 905236 f
+DTCore 90528A l
+DTInstall 90528A f
+DisptchTsk 9052A2 f
+vDisptch 9052A8 f
+VBLCore 9052E4 l
+VInstall 9052E4 f
+VRemove 905334 f
+VBLInt 90534A f
+KBDMngr 9053B8 l
+InitADB 9053B8 f
+FDBShiftInt 905678 f
+ADBOp 9057E0 f
+ADBReInit 905BB8 f
+InitADBDrvr 905BEE f
+ADBProc 905C42 f
+CountADBs 905C7C f
+GetIndADB 905C96 f
+GetADBInfo 905CC2 f
 SETADBINFO 905CC8
-KeyTrans 905DA2 function
-RSetKMap 905EB0 function
-TimeMgr 905EC2 label
-RmvTime 905EC2 function
-InsTime 905F1E function
-PrimeTime 905F76 function
-InitTimeMgr 90613A function
-clock 9061AE label
-OneSecInt 9061AE function
-ClkRW 9061D8 function
-ReadXPRam 90631A function
-WriteXPRam 906350 function
-ClkNoMem 9063A0 function
-Events 9063A2 label
-PostEvent 9063A2 function
-OSEventAvail 906420 function
-GetOSEvent 9064AC function
-FlushEvents 9064D6 function
+KeyTrans 905DA2 f
+RSetKMap 905EB0 f
+TimeMgr 905EC2 l
+RmvTime 905EC2 f
+InsTime 905F1E f
+PrimeTime 905F76 f
+InitTimeMgr 90613A f
+clock 9061AE l
+OneSecInt 9061AE f
+ClkRW 9061D8 f
+ReadXPRam 90631A f
+WriteXPRam 906350 f
+ClkNoMem 9063A0 f
+Events 9063A2 l
+PostEvent 9063A2 f
+OSEventAvail 906420 f
+GetOSEvent 9064AC f
+FlushEvents 9064D6 f
 IOCORE 90651E
 FSIODNETBL 90651E
 FETCH 906524
 STASH 906568
 IODONE 906570
 VGODRIVER 90664E
-Open 9066F2 function
-Close 90689A function
-vWaitUntil 9068BC function
-Read 9068D8 function
-vSyncWait 90694A function
+Open 9066F2 f
+Close 90689A f
+vWaitUntil 9068BC f
+Read 9068D8 f
+vSyncWait 90694A f
 write 906958
-Control 90696E function
-Status 90697E function
-KillIO 9069A4 function
-DrvrInstall 9069F8 function
-DrvrRemove 906A56 function
-AddDrive 906A86 function
-SCSIStuff 906A96 label
-InitSCSIMgr 906A96 function
-SCSIMgr 906B54 function
-SCSIBoots 907316 function
-SCSILoad 907316 function
-Loader 9075B6 label
-LoadSeg 9075B6 function
-UnloadSeg 907648 function
+Control 90696E f
+Status 90697E f
+KillIO 9069A4 f
+DrvrInstall 9069F8 f
+DrvrRemove 906A56 f
+AddDrive 906A86 f
+SCSIStuff 906A96 l
+InitSCSIMgr 906A96 f
+SCSIMgr 906B54 f
+SCSIBoots 907316 f
+SCSILoad 907316 f
+Loader 9075B6 l
+LoadSeg 9075B6 f
+UnloadSeg 907648 f
 APPZONEADDR 907690
-FlushApplVBLs 9076B2 function
+FlushApplVBLs 9076B2 f
 CHAIN 9076DA
 LAUNCH 9076E0
 VSEGSTACK 9077DC
@@ -278,56 +278,56 @@ INSTALLRDRIVERS 9078A2
 SGLDREND 907904
 SYSUTIL 907904
 ASYNCPATCH 907904
-ReadParam 907906 function
-WriteParam 907920 function
-ReadDateTime 907944 function
-SetDateTime 90794E function
-Delay 907956 function
+ReadParam 907906 f
+WriteParam 907920 f
+ReadDateTime 907944 f
+SetDateTime 90794E f
+Delay 907956 f
 LWRSTRING 907968
 uprstring 9079D0
-CmpString 9079E6 function
+CmpString 9079E6 f
 relstring 9079FC
 READPRAM 907E70
-InitUtil 907EA6 function
+InitUtil 907EA6 f
 SYSENVIRONS 907FC8
 BLOCKMOVES 9080C2
-BlockMove 9080D0 function
-BlockMove68020 90824C function
-Heap 9083C8 label
-SetApplBase 9083C8 function
-InitApplZone 9083EE function
+BlockMove 9080D0 f
+BlockMove68020 90824C f
+Heap 9083C8 l
+SetApplBase 9083C8 f
+InitApplZone 9083EE f
 VIAZINIT 908468
 VIAZPOSTINIT 9084DE
-InitZone 9084E8 function
-GetZone 908582 function
-SetZone 908588 function
+InitZone 9084E8 f
+GetZone 908582 f
+SetZone 908588 f
 MAXBLOCK 90858E
-CompactMem 90859C function
-PurgeMem 9085CC function
-PurgeSpace 9085E8 function
-FreeMem 9085F2 function
-ResrvMem 9085FC function
-MaxMem 90861A function
-SetGrowZone 90864E function
-SetApplLimit 908658 function
+CompactMem 90859C f
+PurgeMem 9085CC f
+PurgeSpace 9085E8 f
+FreeMem 9085F2 f
+ResrvMem 9085FC f
+MaxMem 90861A f
+SetGrowZone 90864E f
+SetApplLimit 908658 f
 STACKSPACE 90868C
-MaxApplZone 90869E function
+MaxApplZone 90869E f
 NEWPTR 9086D4
-DisposePtr 9086F0 function
-GetPtrSize 908706 function
-SetPtrSize 908710 function
+DisposePtr 9086F0 f
+GetPtrSize 908706 f
+SetPtrSize 908710 f
 PTRZONE 90871A
-NewEmptyHandle 908738 function
+NewEmptyHandle 908738 f
 NWHANDLE 90874C
-DsposeHandle 90876E function
-GetHandleSize 90878E function
-SetHandleSize 90879A function
-HandleZone 9087AC function
+DsposeHandle 90876E f
+GetHandleSize 90878E f
+SetHandleSize 90879A f
+HandleZone 9087AC f
 RECOVERHANDLE 9087B4
-EmptyHandle 9087DA function
+EmptyHandle 9087DA f
 REALLOCHANDLE 9087EA
-HLock 90882E function
-HUnlock 908838 function
+HLock 90882E f
+HUnlock 908838 f
 HPURGE 908842
 HNOPURGE 90884C
 HRSRC 908860
@@ -582,7 +582,7 @@ ReadTimer 90EEBA
 NewPtr 90EED6
 NewSysPtr 90EEE0
 DisposPtr 90EEEA
-HLock 90EEF2 function
+HLock 90EEF2 f
 MoveHHi 90EEFA
 HGetState 90EF02
 HSetState 90EF0A
@@ -733,12 +733,12 @@ MMGREND 9125C8
 CMGR 9125C8
 newcontrol 9125C8
 GETCVARIANT 9126C4
-DisposeControl 912708 function
-KillControls 91272C function
+DisposeControl 912708 f
+KillControls 91272C f
 DRAWONECONTROL 91273E
-ShowControl 91274E function
-HideControl 91276C function
-MoveControl 912780 function
+ShowControl 91274E f
+HideControl 91276C f
+MoveControl 912780 f
 GETCREFCON 9127BE
 SETCREFCON 9127CC
 GETCTLACTION 9127DC
@@ -765,7 +765,7 @@ INITDIALOGS 912BD0
 STOPALERT 912C86
 NOTEALERT 912C8A
 CAUTIONALERT 912C8E
-Alert 912C92 function
+Alert 912C92 f
 GETNEWDIALOG 912DB0
 newdialog 912DEA
 ISDIALOGEVENT 912E84
@@ -843,7 +843,7 @@ RSRCMAPENTRY 914E4E
 RGETRESOURCE 914E5A
 IAPPEND 914E86
 BYTES 914E86
-Munger 914E86 function
+Munger 914E86 f
 XMUNGER 914EB4
 HANDTOHAND 914FEA
 PTRTOXHAND 915012
@@ -851,8 +851,8 @@ PTRTOHAND 91501A
 HANDANDHAND 915034
 PTRANDHAND 915058
 METHODDISPATCH 915068
-LongMul 9150C4 function
-FracMul 9150F0 function
+LongMul 9150C4 f
+FracMul 9150F0 f
 FIXMUL 9150F8
 FRACDIV 9151C2
 FIXDIV 9151C8
@@ -958,27 +958,27 @@ equalstring 9172F6
 NGETTRAPADDRESS 91733C
 DisposPtr 917354
 DisposHandle 917360
-HLock 91736C function
-HUnlock 917378 function
-SetHandleSize 917384 function
-GetHandleSize 917394 function
-BlockMove 91739C function
+HLock 91736C f
+HUnlock 917378 f
+SetHandleSize 917384 f
+GetHandleSize 917394 f
+BlockMove 91739C f
 HGetState 9173B0
 HSetState 9173B8
 StripAddress 9173C8
-Enqueue 9173D0 function
-Dequeue 9173DC function
-Delay 9173E8 function
+Enqueue 9173D0 f
+Dequeue 9173DC f
+Delay 9173E8 f
 CODEENTRY 9173F4
 VERSIONADDRESS 9173F4
 PATCHSTART 9173F6
 ROMANPRINT 9173F6
 ROMANNAME 9173F8
 ROMANSCRIPT 9173FE
-RomanDispTable 917422 label
+RomanDispTable 917422 l
 SETSCRIPT 917440
 GETSCRIPT 917440
-CharByte 917444 function
+CharByte 917444 f
 CHARTYPE 917450
 PIXEL2CHAR 9174B4
 CHAR2PIXEL 917564
@@ -1214,16 +1214,16 @@ equalpt 91FC1E
 stdtext 91FC2A
 CALLTEXT 91FDB6
 TEXTFACE 91FDD6
-DrawChar 91FDE2 function
+DrawChar 91FDE2 f
 CHARWIDTH 91FDF0
 TEXTFONT 91FE08
 TEXTMODE 91FE0C
 TEXTSIZE 91FE10
 SPACEEXTRA 91FE16
 drawstring 91FE22
-DrawText 91FE34 function
+DrawText 91FE34 f
 stringwidth 91FE4C
-TextWidth 91FE5C function
+TextWidth 91FE5C f
 STDTXMEAS 91FEC4
 MEASURETEXT 91FF6A
 GETFONTINFO 920032
@@ -1362,7 +1362,7 @@ COPYMASK 9245FA
 SEEDFILL 92483A
 CALCMASK 924842
 SCROLLRECT 924998
-PackBits 924A96 function
+PackBits 924A96 f
 UNPACKBITS 924B56
 STRETCHBITS 924B9C
 SETUPSTRETCH 925068
@@ -1410,4 +1410,4 @@ SCRNSIZE 9269A8
 SCRNBITMAP 9269B8
 CRSRVBLTASK 9269CC
 pinrect 926B5C
-DispTable 926B6E label
+DispTable 926B6E l

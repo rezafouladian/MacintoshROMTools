@@ -34,34 +34,34 @@ Trap1_7 400806
 Trap1_8 400806
 Trap1_D7 400806
 Trap1_1C3 400806
-Debugger 400806 function
+Debugger 400806 f
 Trap1_F7 400806
 Trap1_FD 400806
 InitFS 400C7A
-InitEvents 400D4C function
-PutIcon 400EC4 function
+InitEvents 400D4C f
+PutIcon 400EC4 f
 SysError 401142
 SysBeep 4011DC
-Enqueue 4019CA function
-Dequeue 4019F0 function
+Enqueue 4019CA f
+Dequeue 4019F0 f
 ScrnBitMap 401E72
 pinrect 401F38
 Dispatch 401F4A
-SetTrapAddress 401FBA function
-GetTrapAddress 40200A function
-Read 4023BE function
+SetTrapAddress 401FBA f
+GetTrapAddress 40200A f
+Read 4023BE f
 write 40242E
-Control 402442 function
-Status 402450 function
-KillIO 402476 function
-DrvrInstall 4024CA function
-DrvrRemove 402528 function
-AddDrive 402558 function
-OSEventAvail 402764 function
-GetOSEvent 4027EC function
-FlushEvents 40280A function
+Control 402442 f
+Status 402450 f
+KillIO 402476 f
+DrvrInstall 4024CA f
+DrvrRemove 402528 f
+AddDrive 402558 f
+OSEventAvail 402764 f
+GetOSEvent 4027EC f
+FlushEvents 40280A f
 Trap1_32 40280A
-InitQueue 402A6C function
+InitQueue 402A6C f
 MountVol 402DF8
 Offline 40343A
 eject 4034E0
@@ -126,16 +126,16 @@ SetPt 408AA0
 equalpt 408AAA
 stdtext 408AB6
 TextFace 408C62
-DrawChar 408C6E function
+DrawChar 408C6E f
 CharWidth 408C7C
 TextFont 408C94
 TextMode 408C98
 TextSize 408C9C
 SpaceExtra 408CA2
 drawstring 408CAE
-DrawText 408CC0 function
+DrawText 408CC0 f
 stringwidth 408CD8
-TextWidth 408CE8 function
+TextWidth 408CE8 f
 StdTxMeas 408D50
 MeasureText 408DF6
 GetFontInfo 408E84
@@ -230,7 +230,7 @@ CopyMask 40CAF0
 SeedFill 40CD30
 CalcMask 40CD38
 ScrollRect 40CE8E
-PackBits 40CF8C function
+PackBits 40CF8C f
 UnpackBits 40D01C
 StdComment 40D8D0
 StdGetPic 40D930
@@ -249,52 +249,52 @@ SetFontLock 40F1D8
 RealFont 40F20E
 SetFScaleDisabl 40F260
 FontMetrics 40F274
-UnloadSeg 40F4E0 function
+UnloadSeg 40F4E0 f
 Chain 40F556
 Launch 40F55C
 ExitToShell 40F6D8
 getappparms 40F710
 Trap0_37 40F790
-WriteParam 40F7AA function
-ReadDateTime 40F7CA function
-SetDateTime 40F7D4 function
-Delay 40F7DC function
-CmpString 40F7EE function
+WriteParam 40F7AA f
+ReadDateTime 40F7CA f
+SetDateTime 40F7D4 f
+Delay 40F7DC f
+CmpString 40F7EE f
 uprstring 40F878
 Trap1_54 40F878
-InitUtil 40FCC2 function
-ReadXPRam 40FE18 function
-WriteXPRam 40FE22 function
+InitUtil 40FCC2 f
+ReadXPRam 40FE18 f
+WriteXPRam 40FE22 f
 SetAppBase 40FE76
-GetZone 40FFA4 function
+GetZone 40FFA4 f
 Trap1_1A 40FFA4
 Trap1_1B 40FFAA
-SetZone 40FFAA function
-CompactMem 40FFBE function
+SetZone 40FFAA f
+CompactMem 40FFBE f
 Trap1_4C 40FFBE
-PurgeMem 40FFEE function
-PurgeSpace 41000A function
-FreeMem 410014 function
+PurgeMem 40FFEE f
+PurgeSpace 41000A f
+FreeMem 410014 f
 Trap1_1D 41003C
-MaxMem 41003C function
-SetGrowZone 410070 function
-SetApplLimit 41007A function
+MaxMem 41003C f
+SetGrowZone 410070 f
+SetApplLimit 41007A f
 StackSpace 41009E
-MaxApplZone 4100AE function
+MaxApplZone 4100AE f
 Trap1_1E 4100D6
 DisposPtr 4100F2
-GetPtrSize 410108 function
+GetPtrSize 410108 f
 PtrZone 41011C
-NewEmptyHandle 41013A function
+NewEmptyHandle 41013A f
 Trap1_22 41014E
 Trap1_23 410170
 Trap1_25 410190
-GetHandleSize 410190 function
+GetHandleSize 410190 f
 Trap1_24 41019C
-EmptyHandle 4101DC function
+EmptyHandle 4101DC f
 Trap1_29 410230
 Trap1_2A 41023A
-HUnlock 41023A function
+HUnlock 41023A f
 HPurge 410244
 HNoPurge 41024E
 MoreMasters 410274
@@ -303,7 +303,7 @@ MMHPrologue 4104C6
 PurgeHeap 410570
 BFindS 4106A2
 CompactHp 4107B2
-BlockMove 410CC0 function
+BlockMove 410CC0 f
 GetKeys 410F30
 Button 410F4C
 TickCount 410F5E
@@ -393,11 +393,11 @@ CountMItems 412CFC
 PlotIcon 412D18
 newcontrol 412D54
 DisposControl 412E96
-KillControls 412EBA function
+KillControls 412EBA f
 Trap1_16D 412ECC
-ShowControl 412ED6 function
-HideControl 412EF4 function
-MoveControl 412F0E function
+ShowControl 412ED6 f
+HideControl 412EF4 f
+MoveControl 412F0E f
 GetCRefCon 412F4C
 SetCRefCon 412F5A
 GetCtlAction 412F6A
@@ -465,7 +465,7 @@ InitDialogs 4148B2
 StopAlert 414968
 NoteAlert 41496C
 CautionAlert 414970
-Alert 414974 function
+Alert 414974 f
 GetNewDialog 414A90
 newdialog 414AC8
 IsDialogEvent 414B60
@@ -489,7 +489,7 @@ SelIText 414F38
 HideDItem 414F92
 ShowDItem 414FF0
 findditem 415064
-Munger 415588 function
+Munger 415588 f
 XMunger 4155B6
 HandToHand 4156EC
 PtrToXHand 41570A
@@ -497,8 +497,8 @@ PtrToHand 415712
 HandAndHand 41572C
 PtrAndHand 415750
 MethodDispatch 415760
-LongMul 4157B2 function
-FracMul 4157DE function
+LongMul 4157B2 f
+FracMul 4157DE f
 FixMul 4157E6
 FracDiv 4158B0
 FixDiv 4158B6
@@ -581,9 +581,9 @@ Pack14 41704E
 Pack15 417050
 Secs2Date 417052
 Date2Secs 4170CA
-InsTime 4175D2 function
-RmvTime 4175E0 function
-PrimeTime 4175FA function
+InsTime 4175D2 f
+RmvTime 4175E0 f
+PrimeTime 4175FA f
 _DRVR_2_.Print 41784C
 _DRVR_3_.Sound 4179C0
 _DRVR_4_.Sony 417D30

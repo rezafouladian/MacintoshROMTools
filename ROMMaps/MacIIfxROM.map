@@ -1,134 +1,134 @@
-BaseOfROM 40800000 label
-DispOff 40800022 label
-Critical 40800026 function
-RomLoc 4080002E label
-StartInit1 408000B8 function
-BootRetry 408001A6 function
+BaseOfROM 40800000 l
+DispOff 40800022 l
+Critical 40800026 f
+RomLoc 4080002E l
+StartInit1 408000B8 f
+BootRetry 408001A6 f
 GETRBVSIZE 4080037E
-JmpTblInit 40800470 function
-JmpTbl2 40800472 function
-FillWithOnes 40800480 function
-CompBootStack 40800490 function
-SetUpSysAppZone 408004B0 function
-DrawBeepScreen 40800530 function
-InitShutdownMgr 40800580 function
-InitHiMemGlobals 40800590 function
-InitGlobalVars 40800600 function
-SwitchGoodies 408006F0 label
-WDCBSwOS 4080075C label
-PMSPSwOS 4080075E label
-InitSwitcherTable 40800760 function
-GetPRAM 40800780 function
-WhichCPU 408007C0 function
-WhichBoard 408007F0 function
-SetUpTimeK 40800800 function
-RunDiags 408008E0 function
+JmpTblInit 40800470 f
+JmpTbl2 40800472 f
+FillWithOnes 40800480 f
+CompBootStack 40800490 f
+SetUpSysAppZone 408004B0 f
+DrawBeepScreen 40800530 f
+InitShutdownMgr 40800580 f
+InitHiMemGlobals 40800590 f
+InitGlobalVars 40800600 f
+SwitchGoodies 408006F0 l
+WDCBSwOS 4080075C l
+PMSPSwOS 4080075E l
+InitSwitcherTable 40800760 f
+GetPRAM 40800780 f
+WhichCPU 408007C0 f
+WhichBoard 408007F0 f
+SetUpTimeK 40800800 f
+RunDiags 408008E0 f
 STARTTESTFLAGS 40800908
-SetupHWBases 40800910 function
-InitSCSI 408009A0 function
-InitIWM 408009C0 function
-InitSCC 40800A2E function
-ConfigureRAM 40800A70 function
-InitVidGlobals 40800BE0 function
-RdVidParam 40800BF0 function
-OpensDrvr 40800CA0 function
-OpnVidDeflt 40800D00 function
-InitVidDeflt 40800D50 function
-AddVidDevice 40800D90 function
-GetDefVidMode 40800DE0 function
-InitDefGamma 40800E40 function
-InitDummyScreen 40800F40 function
-FROVideo 40801000 function
-InitCrsrVars 40801050 function
-InitCrsrMgr 40801060 function
-InitIOMgr 408010F0 function
-InitMemMgr 408011A0 function
-InitRsrcMgr 408011D0 function
-InitDTQueue 408011F0 function
-InitSlots 40801210 function
-GOOFYDoEject 40801240 function
+SetupHWBases 40800910 f
+InitSCSI 408009A0 f
+InitIWM 408009C0 f
+InitSCC 40800A2E f
+ConfigureRAM 40800A70 f
+InitVidGlobals 40800BE0 f
+RdVidParam 40800BF0 f
+OpensDrvr 40800CA0 f
+OpnVidDeflt 40800D00 f
+InitVidDeflt 40800D50 f
+AddVidDevice 40800D90 f
+GetDefVidMode 40800DE0 f
+InitDefGamma 40800E40 f
+InitDummyScreen 40800F40 f
+FROVideo 40801000 f
+InitCrsrVars 40801050 f
+InitCrsrMgr 40801060 f
+InitIOMgr 408010F0 f
+InitMemMgr 408011A0 f
+InitRsrcMgr 408011D0 f
+InitDTQueue 408011F0 f
+InitSlots 40801210 f
+GOOFYDoEject 40801240 f
 OPENNETBOOTPATCH 40801250
 ENABLEPARITYPATCH 40801282
 FMCPARITYPATCH 40801298
-FindStartupDevice 40801350 function
-GetDefaultStartup 40801390 function
-SetDefaultStartup 408013A0 function
+FindStartupDevice 40801350 f
+GetDefaultStartup 40801390 f
+SetDefaultStartup 408013A0 f
 GETOSDEFAULT 408013B0
 SETOSDEFAULT 408013C0
 GETVIDEODEFAULT 408013E0
 SETVIDEODEFAULT 408013F0
-InternalWait 40801400 function
-EmbarkOnSearch 40801430 function
-WaitForInternal 40801460 function
+InternalWait 40801400 f
+EmbarkOnSearch 40801430 f
+WaitForInternal 40801460 f
 LOADSLOTDRVRS 408014F0
-LoadDrivers 40801560 function
-PlanStrategy 40801590 function
-FindNextCandidate 408015A0 function
-NextDQEntry 408015C0 function
-SelectDevice 408015D0 function
-CheckMouseEject 408015F0 function
-GetStartupInfo 40801600 function
-ReactToFailure 40801620 function
-VisualUpdate 40801640 function
-EnableXFlash 4080167C function
-ShowDeviceFail 40801690 function
-ShowSuccess 408016A0 function
-EjectMe 408016C0 function
-IsReject 408016D0 function
-IsItFlopOrDef 408016F0 function
-IsItFloppy 40801700 function
-IsItAnything 40801710 function
-NeverAgain 40801720 function
-InBootMask 40801740 function
-HappyMac 40801750 function
-ShowPlainDisk 4080175C function
-ShowDiskQ 40801762 function
-ShowDiskX 40801768 function
-PlotMyIcon 4080176C function
+LoadDrivers 40801560 f
+PlanStrategy 40801590 f
+FindNextCandidate 408015A0 f
+NextDQEntry 408015C0 f
+SelectDevice 408015D0 f
+CheckMouseEject 408015F0 f
+GetStartupInfo 40801600 f
+ReactToFailure 40801620 f
+VisualUpdate 40801640 f
+EnableXFlash 4080167C f
+ShowDeviceFail 40801690 f
+ShowSuccess 408016A0 f
+EjectMe 408016C0 f
+IsReject 408016D0 f
+IsItFlopOrDef 408016F0 f
+IsItFloppy 40801700 f
+IsItAnything 40801710 f
+NeverAgain 40801720 f
+InBootMask 40801740 f
+HappyMac 40801750 f
+ShowPlainDisk 4080175C f
+ShowDiskQ 40801762 f
+ShowDiskX 40801768 f
+PlotMyIcon 4080176C f
 PSHICNRECT 4080177E
 PLOTICNN 40801798
-EraseMyIcon 408017DA function
-iGetTimeOut 40801C00 function
-iSetTimeOut 40801C10 function
-iGetWaitFlags 40801C30 function
-iSetWaitFlags 40801C40 function
-iDisableDynWait 40801C60 function
-iEnableDynWait 40801C80 function
-iDisablePermWait 40801CA0 function
-iEnablePermWait 40801CC0 function
-GetRawTimeout 40801CE0 function
-SetRawTimeout 40801D00 function
-MyBoot 40801D10 label
-BootMe 40801D10 function
-CenterRect 40802170 function
-MouseInit 408021A0 function
+EraseMyIcon 408017DA f
+iGetTimeOut 40801C00 f
+iSetTimeOut 40801C10 f
+iGetWaitFlags 40801C30 f
+iSetWaitFlags 40801C40 f
+iDisableDynWait 40801C60 f
+iEnableDynWait 40801C80 f
+iDisablePermWait 40801CA0 f
+iEnablePermWait 40801CC0 f
+GetRawTimeout 40801CE0 f
+SetRawTimeout 40801D00 f
+MyBoot 40801D10 l
+BootMe 40801D10 f
+CenterRect 40802170 f
+MouseInit 408021A0 f
 OPENBDRVRS 408021E0
 OPENSLOTS 40802240
-InitEvents 408022E0 function
-CritErr 40802310 function
-PutIcon 40802524 function
-SysErrInit 408025F0 function
-Debugger 40802650 function
-DebugProlog 40802690 function
-ToDeepShit 408026A0 function
-GenExcps 408026F0 function
+InitEvents 408022E0 f
+CritErr 40802310 f
+PutIcon 40802524 f
+SysErrInit 408025F0 f
+Debugger 40802650 f
+DebugProlog 40802690 f
+ToDeepShit 408026A0 f
+GenExcps 408026F0 f
 IRQException 40802708
 NMIEXCP 4080270A
-SystemError 40802720 function
-SysErr1 40802726 function
-SysErr2 40802736 function
-AllocFakeRgns 408027C0 function
-DSErrorHandler 4080280E function
-Universal 40802E00 function
-JumpIntoROM 40802E00 function
-InitVIAs 40802E8C function
-GetHardwareInfo 40802F18 function
+SystemError 40802720 f
+SysErr1 40802726 f
+SysErr2 40802736 f
+AllocFakeRgns 408027C0 f
+DSErrorHandler 4080280E f
+Universal 40802E00 f
+JumpIntoROM 40802E00 f
+InitVIAs 40802E8C f
+GetHardwareInfo 40802F18 f
 MMUSTUFF 40803E00
 INITMMU 408042FE
 STARTREADPRAM 40804498
-InitMMUTrap 40804AFE function
-InitMMUGlobals 40804B0A function
-MMUCleanupFor8Mb 40804B5E function
+InitMMUTrap 40804AFE f
+InitMMUGlobals 40804B0A f
+MMUCleanupFor8Mb 40804B5E f
 IOPMGR 40804CC0
 IOPINFOACCESS 40804CC0
 IOPMSGREQUEST 40804DE4
@@ -209,17 +209,17 @@ RBVSLOTINT 40806EAA
 OSSSLOTINT 40806EC0
 INITSDTBL 40806F94
 INITSPTBL 40806FB4
-SystemBeep 40806FC0 function
-BootBeep 40807040 function
+SystemBeep 40806FC0 f
+BootBeep 40807040 f
 BOOTBEEP6 40807052
-ErrorBeep1 40807058 function
-ErrorBeep2 4080705E function
-ErrorBeep3 40807064 function
-ErrorBeep4 4080706A function
-SCSIBoots 408071F0 function
-SCSILoad 408071F0 function
+ErrorBeep1 40807058 f
+ErrorBeep2 4080705E f
+ErrorBeep3 40807064 f
+ErrorBeep4 4080706A f
+SCSIBoots 408071F0 f
+SCSILoad 408071F0 f
 SCSIOLD 40807460
-SCSIMgr 40807460 function
+SCSIMgr 40807460 f
 UNIMPLEMENTED 40807488
 DOSCSISTAT 4080748E
 DOSCSIRESET 408074B2
@@ -299,104 +299,104 @@ FASTREADOSS 408092EA
 SLOWCOMP 408093CE
 FASTCOMP 40809434
 SCSIINIT 40809490
-InitSCSIMgr 40809490 function
+InitSCSIMgr 40809490 f
 SCSISETFLAGS 408097E0
-CacheProc 40809830 function
-CacheTrap 40809840 function
-QStuff 40809930 label
-Enqueue 40809930 function
-Dequeue 40809956 function
-InitQueue 4080999E function
-Dispatcher 408099B0 label
-EMT1010 408099B0 function
-GetTrapAddress 40809A66 function
-SetTrapAddress 40809A6E function
-CacheFlush 40809A76 function
-vCacheFlush 40809A7C function
-InitDispatcher 40809A96 function
-BadTrap 40809AE6 function
-IntHnd 40809B00 function
+CacheProc 40809830 f
+CacheTrap 40809840 f
+QStuff 40809930 l
+Enqueue 40809930 f
+Dequeue 40809956 f
+InitQueue 4080999E f
+Dispatcher 408099B0 l
+EMT1010 408099B0 f
+GetTrapAddress 40809A66 f
+SetTrapAddress 40809A6E f
+CacheFlush 40809A76 f
+vCacheFlush 40809A7C f
+InitDispatcher 40809A96 f
+BadTrap 40809AE6 f
+IntHnd 40809B00 f
 SCCIOPBYPASSINT 40809D00
-PowerOff 40809E16 function
-InitIntHandler 40809E56 function
+PowerOff 40809E16 f
+InitIntHandler 40809E56 f
 DISABLEINTSOURCES 40809F4C
-Enable60HzInts 40809F9A function
+Enable60HzInts 40809F9A f
 ENABLEONESECINTS 40809FBA
-EnableSlotInts 40809FC6 function
-EnableSWIMIOPInts 40809FEE function
+EnableSlotInts 40809FC6 f
+EnableSWIMIOPInts 40809FEE f
 EnableASCInts 4080A00E
-DisableASCInts 4080A02E function
-ClearASCInt 4080A04C function
-EnableSCSIInts 4080A062 function
-DisableSCSIInts 4080A094 function
-ClearSCSIInt 4080A0C4 function
-DebugUtil 4080A0F0 function
-EnableParityInts 4080A182 function
-DTCore 4080A1D0 label
-DTInstall 4080A1D0 function
-DisptchTsk 4080A1E8 function
-vDisptch 4080A1EE function
-VBLCore 4080A230 label
-VInstall 4080A230 function
-VRemove 4080A280 function
-VBLInt 4080A296 function
-SlotVInstall 4080A312 function
-SlotVRemove 4080A318 function
-AttachVBL 4080A328 function
-DoVBLTask 4080A332 function
-InitVBLQs 4080A350 function
-KBDMngr 4080A360 label
-CountADBs 4080A360 function
-GetIndADB 4080A37A function
-GetADBInfo 4080A3A6 function
+DisableASCInts 4080A02E f
+ClearASCInt 4080A04C f
+EnableSCSIInts 4080A062 f
+DisableSCSIInts 4080A094 f
+ClearSCSIInt 4080A0C4 f
+DebugUtil 4080A0F0 f
+EnableParityInts 4080A182 f
+DTCore 4080A1D0 l
+DTInstall 4080A1D0 f
+DisptchTsk 4080A1E8 f
+vDisptch 4080A1EE f
+VBLCore 4080A230 l
+VInstall 4080A230 f
+VRemove 4080A280 f
+VBLInt 4080A296 f
+SlotVInstall 4080A312 f
+SlotVRemove 4080A318 f
+AttachVBL 4080A328 f
+DoVBLTask 4080A332 f
+InitVBLQs 4080A350 f
+KBDMngr 4080A360 l
+CountADBs 4080A360 f
+GetIndADB 4080A37A f
+GetADBInfo 4080A3A6 f
 SETADBINFO 4080A3AC
-ADBOp 4080A3DC function
-ADBReInit 4080A752 function
-ADBProc 4080A776 function
-InitADBDrvr 4080A7B0 function
-InitADB 4080A802 function
-RSetKMap 4080AA84 function
-KeyTrans 4080AD7A function
-TimeMgr 4080AE90 label
-RmvTime 4080AE90 function
-InsTime 4080AEEC function
-PrimeTime 4080AF1A function
-InitTimeMgr 4080B0C6 function
-clock 4080B140 label
-OneSecInt 4080B140 function
-ClkRW 4080B16A function
-ReadXPRam 4080B186 function
-WriteXPRam 4080B190 function
-ClkNoMem 4080B1E4 function
-ValidatePRAM 4080B27C function
-Events 4080B3A0 label
-PostEvent 4080B3A0 function
-OSEventAvail 4080B418 function
-GetOSEvent 4080B4A2 function
-FlushEvents 4080B4CC function
+ADBOp 4080A3DC f
+ADBReInit 4080A752 f
+ADBProc 4080A776 f
+InitADBDrvr 4080A7B0 f
+InitADB 4080A802 f
+RSetKMap 4080AA84 f
+KeyTrans 4080AD7A f
+TimeMgr 4080AE90 l
+RmvTime 4080AE90 f
+InsTime 4080AEEC f
+PrimeTime 4080AF1A f
+InitTimeMgr 4080B0C6 f
+clock 4080B140 l
+OneSecInt 4080B140 f
+ClkRW 4080B16A f
+ReadXPRam 4080B186 f
+WriteXPRam 4080B190 f
+ClkNoMem 4080B1E4 f
+ValidatePRAM 4080B27C f
+Events 4080B3A0 l
+PostEvent 4080B3A0 f
+OSEventAvail 4080B418 f
+GetOSEvent 4080B4A2 f
+FlushEvents 4080B4CC f
 IOCORE 4080B520
 FSIODNETBL 4080B520
 FETCH 4080B526
 STASH 4080B56A
 IODONE 4080B572
 VGODRIVER 4080B656
-Open 4080B766 function
-Close 4080BAAA function
-vWaitUntil 4080BACC function
-Read 4080BB1C function
-vSyncWait 4080BB8C function
+Open 4080B766 f
+Close 4080BAAA f
+vWaitUntil 4080BACC f
+Read 4080BB1C f
+vSyncWait 4080BB8C f
 write 4080BB9A
-Control 4080BBAE function
-Status 4080BBBE function
-KillIO 4080BBE4 function
-DrvrInstall 4080BC38 function
-DrvrRemove 4080BC96 function
-AddDrive 4080BCC6 function
-Loader 4080BCE0 label
-LoadSeg 4080BCE0 function
-UnloadSeg 4080BD72 function
+Control 4080BBAE f
+Status 4080BBBE f
+KillIO 4080BBE4 f
+DrvrInstall 4080BC38 f
+DrvrRemove 4080BC96 f
+AddDrive 4080BCC6 f
+Loader 4080BCE0 l
+LoadSeg 4080BCE0 f
+UnloadSeg 4080BD72 f
 APPZONEADDR 4080BDBA
-FlushApplVBLs 4080BDDC function
+FlushApplVBLs 4080BDDC f
 CHAIN 4080BE04
 LAUNCH 4080BE0A
 VSEGSTACK 4080BF06
@@ -407,17 +407,17 @@ INSTALLRDRIVERS 4080BFDC
 SGLDREND 4080C03E
 SYSUTIL 4080C040
 ASYNCPATCH 4080C040
-ReadParam 4080C042 function
-WriteParam 4080C05C function
-ReadDateTime 4080C07C function
-SetDateTime 4080C086 function
-Delay 4080C08E function
+ReadParam 4080C042 f
+WriteParam 4080C05C f
+ReadDateTime 4080C07C f
+SetDateTime 4080C086 f
+Delay 4080C08E f
 LWRSTRING 4080C0A0
 uprstring 4080C108
-CmpString 4080C11E function
+CmpString 4080C11E f
 relstring 4080C134
 READPRAM 4080C5A8
-InitUtil 4080C5CC function
+InitUtil 4080C5CC f
 PRAMINIT 4080C676
 PRAMINITTBL 4080C68A
 WPON 4080C70A
@@ -426,44 +426,44 @@ SYSENVIRONS 4080C750
 INITRELIABILITY 4080C860
 RELTIMETASK 4080C8E0
 BLOCKMOVES 4080C920
-BlockMove68020 4080CA10 function
-BlockMove 4080CA10 function
-Heap 4080CB20 label
+BlockMove68020 4080CA10 f
+BlockMove 4080CA10 f
+Heap 4080CB20 l
 INITMEMVECT 4080CC60
-SetApplBase 4080CCFE function
-InitApplZone 4080CD52 function
+SetApplBase 4080CCFE f
+InitApplZone 4080CD52 f
 VIAZINIT 4080CDE4
 VIAZPOSTINIT 4080CEFE
-InitZone 4080CF08 function
-GetZone 4080D068 function
-SetZone 4080D07A function
+InitZone 4080CF08 f
+GetZone 4080D068 f
+SetZone 4080D07A f
 MAXBLOCK 4080D08C
-CompactMem 4080D0A8 function
-PurgeMem 4080D11A function
-PurgeSpace 4080D158 function
-FreeMem 4080D174 function
-ResrvMem 4080D18A function
-MaxMem 4080D1D2 function
-SetGrowZone 4080D23E function
-SetApplLimit 4080D254 function
+CompactMem 4080D0A8 f
+PurgeMem 4080D11A f
+PurgeSpace 4080D158 f
+FreeMem 4080D174 f
+ResrvMem 4080D18A f
+MaxMem 4080D1D2 f
+SetGrowZone 4080D23E f
+SetApplLimit 4080D254 f
 STACKSPACE 4080D2BE
-MaxApplZone 4080D2DC function
+MaxApplZone 4080D2DC f
 NEWPTR 4080D360
-DisposePtr 4080D3A0 function
-GetPtrSize 4080D3CC function
-SetPtrSize 4080D3E4 function
+DisposePtr 4080D3A0 f
+GetPtrSize 4080D3CC f
+SetPtrSize 4080D3E4 f
 PTRZONE 4080D3FC
-NewEmptyHandle 4080D422 function
+NewEmptyHandle 4080D422 f
 NWHANDLE 4080D448
-DsposeHandle 4080D484 function
-GetHandleSize 4080D4B4 function
-SetHandleSize 4080D4D0 function
-HandleZone 4080D4F2 function
+DsposeHandle 4080D484 f
+GetHandleSize 4080D4B4 f
+SetHandleSize 4080D4D0 f
+HandleZone 4080D4F2 f
 RECOVERHANDLE 4080D504
-EmptyHandle 4080D574 function
+EmptyHandle 4080D574 f
 REALLOCHANDLE 4080D59A
-HLock 4080D628 function
-HUnlock 4080D64E function
+HLock 4080D628 f
+HUnlock 4080D64E f
 HPURGE 4080D670
 HNOPURGE 4080D68E
 HRSRC 4080D6B6
@@ -736,7 +736,7 @@ ReadTimer 40814936
 NewPtr 40814960
 NewSysPtr 40814970
 DisposPtr 40814980
-HLock 40814990 function
+HLock 40814990 f
 MoveHHi 408149A0
 HGetState 408149B0
 HSetState 408149C0
@@ -788,12 +788,12 @@ WAITNEXTEVENT 40815CD0
 CMGR 40815D50
 newcontrol 40815D50
 GETCVARIANT 40815E84
-DisposeControl 40815EF8 function
-KillControls 40815F78 function
+DisposeControl 40815EF8 f
+KillControls 40815F78 f
 DRAWONECONTROL 40815F8A
-ShowControl 40815F9A function
-HideControl 40815FB8 function
-MoveControl 40815FCC function
+ShowControl 40815F9A f
+HideControl 40815FB8 f
+MoveControl 40815FCC f
 GETCREFCON 4081600A
 SETCREFCON 40816018
 GETCTLACTION 40816028
@@ -941,7 +941,7 @@ INITDIALOGS 408198CA
 STOPALERT 40819980
 NOTEALERT 40819984
 CAUTIONALERT 40819988
-Alert 4081998C function
+Alert 4081998C f
 GETNEWDIALOG 40819AF8
 newcdialog 40819B90
 newdialog 40819B94
@@ -1022,7 +1022,7 @@ RSRCMAPENTRY 4081C072
 RGETRESOURCE 4081C07E
 IAPPEND 4081C0AA
 BYTES 4081C0B0
-Munger 4081C0B0 function
+Munger 4081C0B0 f
 XMUNGER 4081C0DE
 HANDTOHAND 4081C214
 PTRTOXHAND 4081C23C
@@ -1030,8 +1030,8 @@ PTRTOHAND 4081C244
 HANDANDHAND 4081C25E
 PTRANDHAND 4081C282
 METHODDISPATCH 4081C292
-LongMul 4081C2EE function
-FracMul 4081C30C function
+LongMul 4081C2EE f
+FracMul 4081C30C f
 FIXMUL 4081C312
 FRACDIV 4081C400
 FIXDIV 4081C406
@@ -1102,27 +1102,27 @@ equalstring 4081D7C0
 NGETTRAPADDRESS 4081D810
 DisposPtr 4081D830
 DisposHandle 4081D840
-HLock 4081D850 function
-HUnlock 4081D860 function
-SetHandleSize 4081D870 function
-GetHandleSize 4081D880 function
-BlockMove 4081D890 function
+HLock 4081D850 f
+HUnlock 4081D860 f
+SetHandleSize 4081D870 f
+GetHandleSize 4081D880 f
+BlockMove 4081D890 f
 HGetState 4081D8B0
 HSetState 4081D8C0
 StripAddress 4081D8D0
-Enqueue 4081D8E0 function
-Dequeue 4081D8F0 function
-Delay 4081D900 function
+Enqueue 4081D8E0 f
+Dequeue 4081D8F0 f
+Delay 4081D900 f
 CODEENTRY 4081D910
 VERSIONADDRESS 4081D910
 PATCHSTART 4081D912
 ROMANPRINT 4081D920
 ROMANNAME 4081D922
 ROMANSCRIPT 4081D928
-RomanDispTable 4081D94C label
+RomanDispTable 4081D94C l
 SETSCRIPT 4081D96A
 GETSCRIPT 4081D96A
-CharByte 4081D96E function
+CharByte 4081D96E f
 CHARTYPE 4081D97A
 PIXEL2CHAR 4081D9DE
 CHAR2PIXEL 4081DA8E
@@ -1354,16 +1354,16 @@ DRTEXT 40828150
 stdtext 40828E40
 CALLTEXT 40829110
 TEXTFACE 40829130
-DrawChar 4082913C function
+DrawChar 4082913C f
 CHARWIDTH 4082914A
 TEXTFONT 40829170
 TEXTMODE 40829174
 TEXTSIZE 40829178
 SPACEEXTRA 40829190
 drawstring 4082919C
-DrawText 408291AE function
+DrawText 408291AE f
 stringwidth 408291D0
-TextWidth 408291E0 function
+TextWidth 408291E0 f
 STDTXMEAS 40829250
 MEASURETEXT 40829320
 GETFONTINFO 40829420
@@ -1726,7 +1726,7 @@ CMDEVLOOP 40835990
 SEEDFILL 408359C0
 CALCMASK 408359C8
 SCROLLRECT 40835B20
-PackBits 40835C60 function
+PackBits 40835C60 f
 UNPACKBITS 40835D14
 PACKWORDS 40835D60
 UNPACKWORDS 40835E22
@@ -1992,68 +1992,68 @@ NEWTEMPSCREENBUFFER 40840CD4
 DISPOSESCREENBUFFER 40840EB0
 OFFSCREENVERSION 40840EE0
 QDEXTEND 40840EF0
-StartTest 40840EF0 label
+StartTest 40840EF0 l
 TMVECTORS 40840EF0
-StartTest1 4084114A function
+StartTest1 4084114A f
 SETUPUSP 4084136A
 SETVECTORTABLE 40841470
-JGetHardwareInfo 4084149C function
-CritProc 408414F0 function
-Mod3Test 408414F0 function
-RevMod3Test 40841608 function
-RomTest 4084170E function
-StartUpROMTest 40841778 function
-ExtRAMTest 408417A4 function
-AddrLineTest 408417F6 function
-DataBusTest 40841890 function
-dynamic_bussize_test 4084192A function
+JGetHardwareInfo 4084149C f
+CritProc 408414F0 f
+Mod3Test 408414F0 f
+RevMod3Test 40841608 f
+RomTest 4084170E f
+StartUpROMTest 40841778 f
+ExtRAMTest 408417A4 f
+AddrLineTest 408417F6 f
+DataBusTest 40841890 f
+dynamic_bussize_test 4084192A f
 NOTEST 408419D6
-NonCritProc 408419E0 function
-VramDataTest 408419E0 function
-VramAddrTest 408419E0 function
-MapRamUniqTest 408419E0 function
-MapRamDataTest 408419E0 function
+NonCritProc 408419E0 f
+VramDataTest 408419E0 f
+VramAddrTest 408419E0 f
+MapRamUniqTest 408419E0 f
+MapRamDataTest 408419E0 f
 SETSCCIOPBYPASS 408419E4
-SCCLoopTest 40841B08 function
-SCCRegTest 40841B9A function
-SCCTimerTest 40841C7E function
-VIATest 40841D7E function
-TestSCSI 40841F32 function
-TestASC 4084201A function
-PramTest 40842160 function
-TestRBV 408421EA function
-TestSWIM 40842344 function
-Float_Test 40842632 function
-TestPGC 40842DC8 function
-FMCRegTest 40842E34 function
-FMCCacheTest 40842EB2 function
-OSSRegTest 40842FC4 function
-OSSIntTest 4084306E function
-RPUTest 408430DC function
-PostProc 40843150 label
-GoTM 40843150 function
-Error1Handler 4084315A function
-Error2Handler 408431B4 function
-Error3Handler 408431EA function
-Error4Handler 40843214 function
-NCErrorHandler 4084323E function
+SCCLoopTest 40841B08 f
+SCCRegTest 40841B9A f
+SCCTimerTest 40841C7E f
+VIATest 40841D7E f
+TestSCSI 40841F32 f
+TestASC 4084201A f
+PramTest 40842160 f
+TestRBV 408421EA f
+TestSWIM 40842344 f
+Float_Test 40842632 f
+TestPGC 40842DC8 f
+FMCRegTest 40842E34 f
+FMCCacheTest 40842EB2 f
+OSSRegTest 40842FC4 f
+OSSIntTest 4084306E f
+RPUTest 408430DC f
+PostProc 40843150 l
+GoTM 40843150 f
+Error1Handler 4084315A f
+Error2Handler 408431B4 f
+Error3Handler 408431EA f
+Error4Handler 40843214 f
+NCErrorHandler 4084323E f
 PRLOG 408432C0
 PRAMLOG 408432C0
 SIGNBYTES 40843606
-TMProc 40843610 label
-TestManager 40843610 function
-TMRestart 4084394A function
-TMEntry0 40843958 function
-TMEntry1 4084395C function
+TMProc 40843610 l
+TestManager 40843610 f
+TMRestart 4084394A f
+TMEntry0 40843958 f
+TMEntry1 4084395C f
 SETUPBASES 40843E68
 StartTimer 40843F44
 SENDTOCLK 40844092
-WrXByte 408440D2 function
-RdXByte 40844108 function
+WrXByte 408440D2 f
+RdXByte 40844108 f
 CLKWPOFF 4084413E
-SizeMemory 40844180 function
-Overpatch 40844290 label
+SizeMemory 40844180 f
+Overpatch 40844290 l
 FINDDEVBASEPATCH 40844290
 SEPARITYPATCH 408442A4
 INITOVERPATCH 408474D0
-DispTable 408514E0 label
+DispTable 408514E0 l
