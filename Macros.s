@@ -6,7 +6,7 @@
     endm
 
     ; Jump to an address, storing the return address in A5
-    macro BSR6
+    macro BSR5
         lea .\@,A5
         jmp (\1,PC)
     .\@:
