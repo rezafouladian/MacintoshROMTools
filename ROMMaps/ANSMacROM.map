@@ -754,8 +754,14 @@ dbs_lwb5 408C7FD0 label
 dbs_lwb6 408C7FF0 label
 MovInvTest 408C8000 function
 NoTest 408C808C function
+SCCTimerTest 408C834E label
+TestCSCRegs 408CAB0A label
 goTM 408CABF0 function
 Error1Handler 408CABFA function
+TJump 408CBB68 label
+MaxTest 408CBB90 label
+NJump 408CBB94 label
+MaxNTst 408CBC08 label
 TMRestart 408CBC10 function
 TMEntry0 408CBC20 function
 TMEntry1 408CBC24 function
@@ -772,6 +778,9 @@ Service 408CBE72 function
 PwrMgrCmd 408CC054 function
 DoCritTest 408CC060 function
 DoNonCritTest 408CC152 function
+Version 408CC264 function
+NubSTMDispatch 408CC2D8 function
+NubMgrDispatch 408CC2DA function
 SetupBases 408CC2DC function
 InitSCC 408CC30A function
 SendString 408CC384 function
