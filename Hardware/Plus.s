@@ -12,3 +12,11 @@ BaseOfROM       EQU         $400000
 
 DiagROM         EQU         $F80000
 DiagROM1        EQU         $F80080
+
+DBase           EQU         $DFE1FF
+
+SoundLow        EQU         $3FFD00
+
+PWMBuffer       EQU         $3FFD01
+
+seRegs          EQU         $3FFC80
