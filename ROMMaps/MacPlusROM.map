@@ -270,31 +270,31 @@ GetZone 40FFA4 function
 Trap1_1A 40FFA4
 Trap1_1B 40FFAA
 SetZone 40FFAA function
-CompactMem 40FFBE
+CompactMem 40FFBE function
 Trap1_4C 40FFBE
-PurgeMem 40FFEE
-PurgeSpace 41000A
-FreeMem 410014
+PurgeMem 40FFEE function
+PurgeSpace 41000A function
+FreeMem 410014 function
 Trap1_1D 41003C
-MaxMem 41003C
-SetGrowZone 410070
-SetApplLimit 41007A
+MaxMem 41003C function
+SetGrowZone 410070 function
+SetApplLimit 41007A function
 StackSpace 41009E
-MaxApplZone 4100AE
+MaxApplZone 4100AE function
 Trap1_1E 4100D6
 DisposPtr 4100F2
-GetPtrSize 410108
+GetPtrSize 410108 function
 PtrZone 41011C
 NewEmptyHandle 41013A function
 Trap1_22 41014E
 Trap1_23 410170
 Trap1_25 410190
-GetHandleSize 410190
+GetHandleSize 410190 function
 Trap1_24 41019C
-EmptyHandle 4101DC
+EmptyHandle 4101DC function
 Trap1_29 410230
 Trap1_2A 41023A
-HUnlock 41023A
+HUnlock 41023A function
 HPurge 410244
 HNoPurge 41024E
 MoreMasters 410274
@@ -465,7 +465,7 @@ InitDialogs 4148B2
 StopAlert 414968
 NoteAlert 41496C
 CautionAlert 414970
-Alert 414974
+Alert 414974 function
 GetNewDialog 414A90
 newdialog 414AC8
 IsDialogEvent 414B60
