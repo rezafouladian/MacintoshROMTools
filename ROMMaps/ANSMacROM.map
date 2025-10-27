@@ -75,12 +75,14 @@ SystemError 408031D0 function
 InitRomVectors 408062B0 function
 SwitchMMU 4080A1CA function
 ValidatePRAM 4080DA9C function
+CudaInit 4080EDB2 function
 TRAP_26A 4080F202 function
 DockingDispatch 4080F310 function
 SetupDockBases 4080F48E function
 InitEgretOrCuda 4080FEB0 function
 EnableExtCache 40810CF6 function
 JumpIntoROM 40814040 function
+CudaDone 40814116 label
 InitVIAs 4081416C function
 GetHardwareInfo 40814250 function
 EnqueueTrap 40815190 function
