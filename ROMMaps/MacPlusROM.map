@@ -88,14 +88,14 @@ HideCursor 4082F2
 ShowCursor 4082F8
 shieldcursor 4082FE
 ObscureCursor 40832E
-BitNot 408334
-BitAnd 40833C
-BitXor 408344
-BitOr 40834E
-BitShift 408356
-BitTst 40836C
-BitSet 40837A
-BitClr 408384
+BitNot 408334 f
+BitAnd 40833C f
+BitXOr 408344 f
+BitOr 40834E f
+BitShift 408356 f
+BitTst 40836C f
+BitSet 40837A f
+BitClr 408384 f
 random 40839C
 ForeColor 4083EE
 BackColor 4083F2
@@ -309,7 +309,7 @@ Button 410F4C
 TickCount 410F5E
 GetMouse 410FA0
 StillDown 410FB6
-WaitMouseUp 410FDE
+WaitMouseUp 410FDE f
 EventAvail 410FFC
 GetNextEvent 411000
 newstring 4111AC
@@ -369,7 +369,7 @@ menuselect 41246E
 GetMenuBar 41279E
 SetMenuBar 4127B2
 DisposMenu 4127C2
-FlashMenuBar 4127D8
+FlashMenuBar 4127D8 f
 GetItmIcon 4128AC
 SetItmIcon 4128B0
 GetItmStyle 4128B4
@@ -377,20 +377,20 @@ SetItmStyle 4128B8
 GetItmMark 4128BC
 SetItmMark 4128C0
 CheckItem 4128C4
-MenuKey 4128E4
-getitem 412960
+MenuKey 4128E4 f
+GetItem 412960 f
 CalcMenuSize 412994
 newmenu 4129CA
 appendmenu 412A1A
 insmenuitem 412A22
 GetMHandle 412B7E
 DelMenuItem 412B9E
-setitem 412BD0
+SetItem 412BD0 f
 SetMFlash 412C16
-AddResMenu 412C20
+AddResMenu 412C20 f
 InsertResMenu 412C28
 CountMItems 412CFC
-PlotIcon 412D18
+PlotIcon 412D18 f
 newcontrol 412D54
 DisposControl 412E96
 KillControls 412EBA f
@@ -400,10 +400,10 @@ HideControl 412EF4 f
 MoveControl 412F0E f
 GetCRefCon 412F4C
 SetCRefCon 412F5A
-GetCtlAction 412F6A
-SetCtlAction 412F6E
+GetCtlAction 412F6A f
+SetCtlAction 412F6E f
 SizeControl 412F72
-HiliteControl 412F9A
+HiliteControl 412F9A f
 getctitle 412FC6
 setctitle 412FDE
 GetCtlValue 413020
@@ -430,7 +430,7 @@ CloseResFile 413BD2
 Count1Resources 413C76
 CountResources 413C7A
 Get1IxResource 413CA0
-GetIndResource 413CA4
+GetIndResource 413CA4 f
 Count1Types 413D3C
 CountTypes 413D40
 Get1IxType 413D86
@@ -461,31 +461,31 @@ RmveResource 4146E8
 SizeRsrc 414864
 MaxSizeRsrc 414886
 Trap1_1C5 41489A
-InitDialogs 4148B2
+InitDialogs 4148B2 f
 StopAlert 414968
 NoteAlert 41496C
-CautionAlert 414970
+CautionAlert 414970 f
 Alert 414974 f
-GetNewDialog 414A90
-newdialog 414AC8
+GetNewDialog 414A90 f
+NewDialog 414AC8 f
 IsDialogEvent 414B60
 DialogSelect 414B9A
 ModalDialog 414BDA
-DrawDialog 414C68
-UpdtDialog 414C80
-CloseDialog 414C9E
-DisposDialog 414D24
-CouldDialog 414D5A
-CouldAlert 414D68
-FreeDialog 414DB4
-FreeAlert 414DC2
-paramtext 414E0E
-ErrorSound 414E32
+DrawDialog 414C68 f
+UpdtDialog 414C80 f
+CloseDialog 414C9E f
+DisposDialog 414D24 f
+CouldDialog 414D5A f
+CouldAlert 414D68 f
+FreeDialog 414DB4 f
+FreeAlert 414DC2 f
+ParamText 414E0E f
+ErrorSound 414E32 f
 GetDItem 414E3A
 SetDItem 414E80
 getitext 414EB6
 setitext 414ED6
-SelIText 414F38
+SelIText 414F38 f
 HideDItem 414F92
 ShowDItem 414FF0
 findditem 415064
@@ -505,7 +505,7 @@ FixDiv 4158B6
 FracSqrt 415900
 LoWord 415974
 HiWord 41597C
-FixRound 415986
+FixRound 415986 f
 FracCos 4159A6
 FracSin 4159AE
 FixATan2 415A56
@@ -515,27 +515,27 @@ X2Fix 415B4A
 X2Frac 415B50
 Fix2Long 415BAC
 Frac2Fix 415BB0
-Long2Fix 415BCC
-Fix2Frac 415BD0
-SystemClick 415CA0
-SystemTask 415D72
-SystemMenu 415DEE
+Long2Fix 415BCC f
+Fix2Frac 415BD0 f
+SystemClick 415CA0 f
+SystemTask 415D72 f
+SystemMenu 415DEE f
 SysEdit 415E36
 opendeskacc 415E64
 CloseDeskAcc 415EB2
-GetPattern 415ECC
-GetCursor 415EE6
-GetString 415EEE
-GetIcon 415EF6
-GetPicture 415EFE
-GetNewWindow 415F06
-GetNewControl 415F5C
+GetPattern 415ECC f
+GetCursor 415EE6 f
+GetString 415EEE f
+GetIcon 415EF6 f
+GetPicture 415EFE f
+GetNewWindow 415F06 f
+GetNewControl 415F5C f
 GetRMenu 415FAC
-GetNewMBar 41602A
+GetNewMBar 41602A f
 TEGetText 41608E
-TEInit 41609A
-TEDispose 4160C0
-TextBox 4160DE
+TEInit 41609A f
+TEDispose 4160C0 f
+TextBox 4160DE f
 TESetText 4161BC
 TECalText 416200
 TESetSelect 41623A
