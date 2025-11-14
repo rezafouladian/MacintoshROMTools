@@ -252,8 +252,19 @@ FontMetrics 40F274
 UnloadSeg 40F4E0 f
 Chain 40F556
 Launch 40F55C
-ExitToShell 40F6D8
-getappparms 40F710
+GoodByeLoop 40F576 l
+NextGoodBye 40F590 l
+LaunchCom 40F59C l
+SkipClose 40F5BA l
+GoInitAZone 40F5E2 l
+SetNewStack 40F66E l
+SetA5 40F674 l
+vSegStack 40F67A f
+ExitToShell 40F6D8 f
+BadOpen 40F70A f
+GetAppParms 40F710 f
+InstallRDrivers 40F72C f
+IRDLoop 40F73A l
 Trap0_37 40F790
 WriteParam 40F7AA f
 ReadDateTime 40F7CA f
