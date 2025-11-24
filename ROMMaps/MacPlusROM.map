@@ -67,7 +67,7 @@ Offline 40343A
 eject 4034E0
 unmountvol 4035B4
 flushvol 4035FC
-GetVolInfo 403824
+GetVolInfo 403824 f
 setvol 403ADA
 create 4041E2
 Delete 40440C
@@ -124,7 +124,7 @@ ClipRect 408A6E
 SetClip 408A80
 SetPt 408AA0
 equalpt 408AAA
-stdtext 408AB6
+StdText 408AB6 f
 TextFace 408C62
 DrawChar 408C6E f
 CharWidth 408C7C
@@ -144,13 +144,13 @@ LineTo 4096FA
 Line 409710
 MoveTo 409728
 Move 409734
-HidePen 4097C0
+HidePen 4097C0 f
 ShowPen 4097C4
-GetPenState 4097D0
+GetPenState 4097D0 f
 SetPenState 4097D4
-GetPen 4097F6
-PenSize 409806
-PenMode 409814
+GetPen 4097F6 f
+PenSize 409806 f
+PenMode 409814 f
 PenPat 40981A
 PenNormal 40982E
 StdRect 409E7E
@@ -306,8 +306,8 @@ EmptyHandle 4101DC f
 Trap1_29 410230
 Trap1_2A 41023A
 HUnlock 41023A f
-HPurge 410244
-HNoPurge 41024E
+HPurge 410244 f
+HNoPurge 41024E f
 MoreMasters 410274
 DerefHandle 41045E
 MMHPrologue 4104C6
@@ -337,10 +337,10 @@ GetWMgrPort 4114DE
 CheckUpdate 4114E8
 InitWindows 41157C
 newwindow 411642
-CloseWindow 411776
+CloseWindow 411776 f
 DisposWindow 411804
 ShowWindow 411812
-HideWindow 41183A
+HideWindow 41183A f
 GetWRefCon 411864
 SetWRefCon 411872
 SetWindowPic 411882
@@ -351,7 +351,7 @@ deltapoint 411924
 MoveWindow 411974
 HiliteWindow 411A84
 SizeWindow 411AC4
-ZoomWindow 411B18
+ZoomWindow 411B18 f
 trackgoaway 411B7E
 trackbox 411B86
 SelectWindow 411BF4
@@ -374,11 +374,11 @@ InsertMenu 41220E
 DeleteMenu 4122AE
 DrawMenuBar 412350
 HiliteMenu 4123DA
-EnableItem 412404
-DisableItem 412420
+EnableItem 412404 f
+DisableItem 412420 f
 menuselect 41246E
-GetMenuBar 41279E
-SetMenuBar 4127B2
+GetMenuBar 41279E f
+SetMenuBar 4127B2 f
 DisposMenu 4127C2
 FlashMenuBar 4127D8 f
 GetItmIcon 4128AC
@@ -480,8 +480,8 @@ Alert 414974 f
 GetNewDialog 414A90 f
 NewDialog 414AC8 f
 IsDialogEvent 414B60
-DialogSelect 414B9A
-ModalDialog 414BDA
+DialogSelect 414B9A f
+ModalDialog 414BDA f
 DrawDialog 414C68 f
 UpdtDialog 414C80 f
 CloseDialog 414C9E f
@@ -502,38 +502,38 @@ ShowDItem 414FF0
 findditem 415064
 Munger 415588 f
 XMunger 4155B6
-HandToHand 4156EC
-PtrToXHand 41570A
-PtrToHand 415712
-HandAndHand 41572C
-PtrAndHand 415750
-MethodDispatch 415760
+HandToHand 4156EC f
+PtrToXHand 41570A f
+PtrToHand 415712 f
+HandAndHand 41572C f
+PtrAndHand 415750 f
+MethodDispatch 415760 f
 LongMul 4157B2 f
 FracMul 4157DE f
-FixMul 4157E6
-FracDiv 4158B0
-FixDiv 4158B6
+FixMul 4157E6 f
+FracDiv 4158B0 f
+FixDiv 4158B6 f
 FracSqrt 415900
-LoWord 415974
-HiWord 41597C
+LoWord 415974 f
+HiWord 41597C f
 FixRound 415986 f
-FracCos 4159A6
-FracSin 4159AE
-FixATan2 415A56
-Fix2X 415B18
-Frac2X 415B1E
-X2Fix 415B4A
-X2Frac 415B50
-Fix2Long 415BAC
-Frac2Fix 415BB0
+FracCos 4159A6 f
+FracSin 4159AE f
+FixATan2 415A56 f
+Fix2X 415B18 f
+Frac2X 415B1E f
+X2Fix 415B4A f
+X2Frac 415B50 f
+Fix2Long 415BAC f
+Frac2Fix 415BB0 f
 Long2Fix 415BCC f
 Fix2Frac 415BD0 f
 SystemClick 415CA0 f
 SystemTask 415D72 f
 SystemMenu 415DEE f
 SysEdit 415E36
-opendeskacc 415E64
-CloseDeskAcc 415EB2
+OpenDeskAcc 415E64 f
+CloseDeskAcc 415EB2 f
 GetPattern 415ECC f
 GetCursor 415EE6 f
 GetString 415EEE f
@@ -569,7 +569,7 @@ TEAutoView 416D2C
 InfoScrap 416DAC
 UnloadScrap 416E26
 LodeScrap 416E5A
-ZeroScrap 416E8E
+ZeroScrap 416E8E f
 GetScrap 416EDA
 PutScrap 416F4A
 InitPack 416F90
