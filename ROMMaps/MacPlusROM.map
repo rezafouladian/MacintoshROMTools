@@ -68,20 +68,20 @@ eject 4034E0
 unmountvol 4035B4
 flushvol 4035FC
 GetVolInfo 403824 f
-setvol 403ADA
+SetVol 403ADA f
 create 4041E2
 Delete 40440C
-SetFilType 404852
-SetFilLock 40488A
-RstFilLock 404894
-SetFileInfo 4048D6
-GetFileInfo 404AE2
+SetFilType 404852 f
+SetFilLock 40488A f
+RstFilLock 404894 f
+SetFileInfo 4048D6 f
+GetFileInfo 404AE2 f
 GetFPos 404F10
 SetFPos 404F14
-FlushFile 405144
-GetEOF 405340
+FlushFile 405144 f
+GetEOF 405340 f
 Allocate 40548E
-SetEOF 4054C0
+SetEOF 4054C0 f
 InitCursor 4082C6
 SetCursor 4082D6
 HideCursor 4082F2
@@ -104,8 +104,8 @@ GetMaskTable 40840E
 GetPixel 4085D4
 stuffhex 408608
 InitGraf 4087A6
-OpenPort 40886C
-InitPort 408884
+OpenPort 40886C f
+InitPort 408884 f
 ClosePort 408904
 SetStdProcs 40891C
 LocalToGlobal 408956
@@ -138,7 +138,7 @@ stringwidth 408CD8
 TextWidth 408CE8 f
 StdTxMeas 408D50
 MeasureText 408DF6
-GetFontInfo 408E84
+GetFontInfo 408E84 f
 stdline 409668
 LineTo 4096FA
 Line 409710
@@ -178,13 +178,13 @@ FrameOval 40ADD4
 PaintOval 40ADD8
 EraseOval 40ADDC
 InvertOval 40ADE0
-FillOval 40ADE4
+FillOval 40ADE4 f
 StdArc 40AF58
 FrameArc 40AFD6
 PaintArc 40AFDA
 EraseArc 40AFDE
 InvertArc 40AFE2
-FillArc 40AFE6
+FillArc 40AFE6 f
 AngleFromSlope 40B790
 SlopeFromAngle 40B7CE
 pttoangle 40B8F2
@@ -237,9 +237,9 @@ StdGetPic 40D930
 StdPutPic 40D956
 PicComment 40D9D6
 OpenPicture 40D9EC
-ClosePicture 40DAA8
-KillPicture 40DAE4
-DrawPicture 40DAEC
+ClosePicture 40DAA8 f
+KillPicture 40DAE4 f
+DrawPicture 40DAEC f
 ScalePt 40E512
 MapPt 40E56A
 MapRect 40E5CC
