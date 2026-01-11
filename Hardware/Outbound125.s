@@ -3,7 +3,13 @@ OutboundBuild   EQU         1
 BaseOfROM       EQU         $400000
 PtchROMBase     EQU         $F80000
 OutboundDisp    EQU         $700000                 ; Outbound 32KB SRAM/Internal Display
-OutboundVIA     EQU         $E7E1FE                 ; Unconfirmed
+OutboundVIA     EQU         $E7E1FE                 ; Outbound built-in VIA
+VIAB0           EQU         0                       ; ?
+PRAMBit1        EQU         1                       ; ?
+PRAMBit2        EQU         2                       ; ?
+ExpansionConn   EQU         3                       ; When something is connected to the expansion port
+RAMDiskBit      EQU         5                       ; ?
+VIAB7           EQU         7                       ; ?
 OutboundGlobals EQU         $707D00                 ; Pointer to globals used by Outbound
 PtchTblBase     EQU         $707D04                 ; Pointer to current patch source
 ExpectedPC      EQU         $707D0A                 ; Low word of PC from exception to check for patching
@@ -18,7 +24,7 @@ HostMac         EQU         3                       ; Possibly for marking if a 
 CfgBit4         EQU         4
 CfgBit5         EQU         5
 CfgBit6         EQU         6
-CfgBit7         EQU         7
+ExtFloppy       EQU         7
 OutboundCfg2    EQU         $707D09                 ; A second config space?
 Cfg2Bit0        EQU         0
 HDPresent       EQU         1
@@ -27,6 +33,7 @@ HDPresent       EQU         1
 RAMDiskBase     EQU         $600000                 ; Outbound RAM disk
 OutboundHDBase  EQU         $C00000                 ; Outbound internal HD
 OutboundFlpBase EQU         $C80000                 ; Outbound internal floppy
+OutboundExtFlp  EQU         $580100                 ; Outbound external floppy
 OutboundPwrCtl  EQU         $E00000                 ; Battery and contrast
 
 FloppyEEPROM    EQU         1                       ; Resource ID for Floppy EEPROM
