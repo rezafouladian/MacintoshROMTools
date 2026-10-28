@@ -81,6 +81,7 @@ ExpandMem       EQU         $2B6                    ; Pointer to expanded memory
 DSAlertTab      EQU         $2BA                    ; System error alerts [pointer]
 ExtStsDT  		EQU 		$2BE  					; SCC ext/sts secondary dispatch table [16 bytes]
 ABusDCE   		EQU 		$2DC  					; Pointer to AppleTalk DCE
+FinderName      EQU         $2E0                    ; "Finder" name [String(15)]
 DoubleTime      EQU         $2F0                    ; Double-click ticks [long]
 CaretTime       EQU         $2F4                    ; Caret-blink ticks [long]
 TagData         EQU         $2FA                    ; Sector tag info for disk drivers [14 bytes]
@@ -99,6 +100,7 @@ CacheFlag       EQU         $377
 CacheVars       EQU         $394
 FSFCBLen        EQU         $3F6                    ; HFS present flag
 DSAlertRect     EQU         $3F8                    ; Rectanble for DS alert [8 bytes]
+jIOPMsgRequest  EQU         $61C
 JADBProc        EQU         $6B8
 GrafBegin       EQU         $800
 JCrsrObscure    EQU         $81C
@@ -135,7 +137,9 @@ ScrapVars       EQU         $960                    ; Scrap manager variables [3
 ScrapInfo       EQU         $960                    ; Scrap length [long]
 ScrapTag        EQU         $970                    ; Scrap file name
 ScrapEnd        EQU         $980                    ; End of scrap vars
+ToolScratch     EQU         $9CE                    ; Scratch area [8 bytes]
 GrayRgn         EQU         $9EE                    ; Rounded gray desk region [handle]
+TempRect        EQU         $9FA                    ; Scratch rectangle [8 bytes]
 Scratch8        EQU         $9FA
 OneOne          EQU         $A02
 MinusOne        EQU         $A06
@@ -148,8 +152,10 @@ CurMap          EQU         $A5A                    ; Reference number of curren
 ResReadOnly     EQU         $A5C                    ; Read only flag [word]
 ResLoad         EQU         $A5E                    ; Auto-load feature [word]
 ResErr          EQU         $A60                    ; Resource error code [word]
+ApplScratch     EQU         $A78                    ; Application scratch area [12 bytes]
 ResumeProc      EQU         $A8C                    ; Resume procedure from InitDialogs [pointer]
 SysResName      EQU         $AD8                    ; Name of system resource file
+AppParmHandle   EQU         $AEC                    ; Handle to hold application parameters
 DSErrCode       EQU         $AF0                    ; Last system error alert ID
 ResErrProc      EQU         $AF2                    ; Reference number of current map [word]
 PWMBuf1         EQU         $B0A

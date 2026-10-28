@@ -76,3 +76,8 @@ SCCRBase        EQU         $9FFFFE
 SCCWBase        EQU         $BFFFF9
 
                 INCLUDE     'IWM.s'
+
+; Floppy Stuff
+FlpSectors      EQU         $3C
+FlpSides        EQU         $3D
+FlpTrkSize      EQU         $2A
