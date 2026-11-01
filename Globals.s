@@ -165,7 +165,7 @@ WidthNotFast    EQU         $437                    ; (Boolean) set for the not 
 WidthBadFont    EQU         $438                    ; (Boolean) Corrupted font flag
 WidthLoadSpline EQU         $439                    ; (Boolean) load a spline?
 WidthFREEBYTE   EQU         $43A                    ; (Boolean)
-KeepSplineOnDisk EQU         $448                   ; (word) non-zero means don't load the spline into memory.
+KeepSplineOnDisk EQU        $448                    ; (word) non-zero means don't load the spline into memory.
 JADBProc        EQU         $6B8
 GrafBegin       EQU         $800
 JCrsrObscure    EQU         $81C
@@ -340,7 +340,7 @@ TESysJust       EQU         $BAC                    ; System justification [word
 HiHeapMark      EQU         $BAE                    ; (long) highest address used by a zone below sp
 SegHiEnable     EQU         $BB2                    ; (byte) 0 to disable MoveHHi in LoadSeg
 FDevDisable     EQU         $BB3                    ; (byte) $FF to disable device-defined style extra
-CommToolboxGlobals EQU         $BB4                 ; [long] pointer to CTB Globals
+CommToolboxGlobals EQU      $BB4                    ; [long] pointer to CTB Globals
 NewUnused       EQU         $BC0                    ; (word) - used to be FlEvtMask
 LastFOND        EQU         $BC2
 FONDID          EQU         $BC6

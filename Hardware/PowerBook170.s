@@ -1,3 +1,4 @@
-                INCLUDE     'VIA.s'                 ; Include VIA offsets
-                INCLUDE     'SCSI.s'                ; Include SCSI offsets
+                include     'VIA.s'                 ; Include VIA offsets
+                include     'SCSI.s'                ; Include SCSI offsets
 bufWorldSize    EQU         $800000
+HeapStart       EQU         $2000

@@ -57,3 +57,5 @@ slimEjectReg    EQU         $20
 slimNotEjecting EQU         3
 slimProtectReg  EQU         $30
 slimNoWrites    EQU         3
+
+HiIntMask       EQU         $300
