@@ -20,7 +20,6 @@ SleepNow        EQU         6
 
 ioQElSize       EQU         50                      ; Length of I/O parameter block
 ioMisc          EQU         $1C                     ; [pointer]
-ioQElSize       EQU         $32
 
 noATChg         EQU         6
 
