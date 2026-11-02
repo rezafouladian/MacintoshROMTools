@@ -167,7 +167,9 @@ WidthLoadSpline EQU         $439                    ; (Boolean) load a spline?
 WidthFREEBYTE   EQU         $43A                    ; (Boolean)
 KeepSplineOnDisk EQU        $448                    ; (word) non-zero means don't load the spline into memory.
 JADBProc        EQU         $6B8
+JHideCursor     EQU         $800
 GrafBegin       EQU         $800
+JShowCursor     EQU         $804
 JCrsrObscure    EQU         $81C
 ScrnBase        EQU         $824                    ; Screen base [pointer]
 MTemp           EQU         $828
@@ -417,6 +419,7 @@ MickeyBytes     EQU         $D6A
 QDErr           EQU         $D6E                    ; QuickDraw error code [word]
 SInitFlags      EQU         $D90                    ; StartInit.a flags [word]
 DTQueue         EQU         $D92                    ; (10 bytes) deferred task queue header
+DTQFlags        EQU         $D92
 JDTInstall      EQU         $D9C                    ; Pointer to deferred task install routine [long]
 DSCtrAdj        EQU         $DA8
 IconTLAddr      EQU         $DAC

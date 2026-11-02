@@ -59,3 +59,8 @@ slimProtectReg  EQU         $30
 slimNoWrites    EQU         3
 
 HiIntMask       EQU         $300
+
+HeapStart       EQU         $1E00
+
+DiagROM         EQU         $F80000
+DiagROM1        EQU         $F80080
