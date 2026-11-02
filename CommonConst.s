@@ -481,3 +481,91 @@ IconAndMaskSize EQU         ((32*32)/8)*2           ; Room for icon data and mas
 WhereStringSize EQU         32                      ; Room for the Get Info "Where:" string
 SegmentSize     EQU         512*1024
 
+numFDBAdr       EQU         16
+; ADBDeviceEntry
+            RSRESET
+fDBDevTy    RS.B    1                               ; $00  device type
+fDBOAddr    RS.b    1                               ; $01  original address
+fDBAddr     RS.B    1                               ; $02  current address
+fDBUnused   RS.B    1                               ; $03  unused
+fDBCRA      RS.L    1                               ; $04  completion routine
+fDBOpData   RS.L    1                               ; $08  optional data buffer
+fRecSize    RS.B    0                               ; $0C  record size
+; ADBCmdQEntry
+            RSRESET
+fQCmd       RS.B    1                               ; $00  ADB command
+fQUnused    RS.B    1                               ; $01  unused
+fQBuff      RS.L    1                               ; $02  buffer address
+fQComp      RS.L    1                               ; $06  completion routine
+fQData      RS.L    1                               ; $0A  optional data buffer
+fQSize      RS.B    0                               ; $0E  record size
+; EgretPB
+            RSRESET
+pbCmdType   RS.B    1                               ; $00
+pbCmd       RS.B    1                               ; $01
+pbParam     RS.L    1                               ; $02
+pbByteCnt   RS.W    1                               ; $06
+pbBufPtr    RS.L    1                               ; $08
+pbFlags     RS.B    1                               ; $0C
+pbSpareFlags RS.B   1                               ; $0D
+pbResult    RS.W    1                               ; $0E
+pbCompletion RS.L   1                               ; $10
+EgretPBSize RS.B    0                               ; $14  record size
+; ADBVars
+            RSRESET
+startDevT   RS.B    fRecSize*numFDBAdr              ; $000 device table, 16 entries
+devTSize    EQU     __RS-startDevT                  ; $0C0 (192 bytes)
+startCQ     RS.B    fQSize*8                        ; $0C0 command queue, 8 entries
+endCQ       RS.B    0                               ; $130 end of command queue
+StartReqProc RS.L   1                               ; $130 HW-dependent start-request routine
+ListenBuffPtr RS.L  1                               ; $134 pointer into listen buffer
+ShiftIntResume RS.L 1                               ; $138 resume address after shift int
+fQBegPtr    RS.L    1                               ; $13C queue start
+fQEndPtr    RS.L    1                               ; $140 queue end
+fQHeadPtr   RS.L    1                               ; $144 queue head
+fQEntPtr    RS.L    1                               ; $148 queue entry
+hasDev      RS.W    1                               ; $14C one bit per present device
+devMap      RS.W    1                               ; $14E device address map
+            RS.L    1                               ; $150 unused
+            RS.L    1                               ; $154 pointer to extended ADB data
+            RS.L    1                               ; $158 unused
+fDBCmd      RS.B    1                               ; $15C last ADB command
+fDBFlag     RS.B    1                               ; $15D ADB flags
+
+; fDBFlag bits
+fDBQEmpty   EQU     2                               ; 1 = queue empty
+fDBInit     EQU     5                               ; initialization in progress
+
+fDBAuFlag   RS.B    1                               ; $15E auxiliary flags
+
+; fDBAuFlag bits, PMGR ADB
+pMgrPollEnable EQU  1                               ; 1 = autopoll handled by PMGR
+pMgrAutoPoll EQU    2                               ; 1 = auto polling enabled
+pMgrSRQ     EQU     3                               ; 1 = SRQ detected
+pMgrSetPoll EQU     7                               ; 1 = passing address bitmap to PMGR
+
+; fDBAuFlag bits, Egret ADB
+fDBExpInited EQU    0                               ; explicit command init done
+fDBImpInited EQU    1                               ; implicit command init done
+fDBExpRunning EQU   2                               ; explicit command active
+
+            RS.B    2                               ; $15F unused
+devTOffset  RS.B    1                               ; $161 device table offset for polling
+fDBMvCnt    RS.B    1                               ; $162 address move counter
+fDBCnt      RS.B    1                               ; $163 poll data count (Pascal string length...)
+fDBPBuff    RS.B    8                               ; $164 ...followed by the poll data
+fDBByte0    EQU     fDBPBuff+0                      ; $164
+fDBByte1    EQU     fDBPBuff+1                      ; $165
+pollAddr    RS.B    1                               ; $16C device address being polled
+newAddr     RS.B    1                               ; $16D new address
+pollCmd     RS.B    1                               ; $16E poll command
+InitAddr    RS.B    1                               ; $16F address being polled during init
+            RSSET   (__RS+3)&~3                     ;      align 4
+HWDependentVars RS.B    0                           ; $170 start of HW-dependent vars
+fDBDSize    SET     __RS                            ; $170 (generic part only)
+
+; Egret overlay
+            RSSET   HWDependentVars
+ExplicitEPB RS.B    EgretPBSize                     ; $170 async explicit requests
+ImplicitEPB RS.B    EgretPBSize                     ; $184 implicit autopoll data
+fDBDSize    SET     __RS                            ; $198
