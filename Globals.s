@@ -369,10 +369,16 @@ VidType         EQU         $C2D                    ; (byte) video board type ID
 ScrnInval       EQU         $C2D                    ; (byte) replaces obscure VidType.  When $FFFF, scrn resource is
 VidMode         EQU         $C2E                    ; (byte) video mode (4=4bit color)
 SCSIPoll        EQU         $C2F
-SEVarBase       EQU         $C30
-SEPC            EQU         $C70
-SESR            EQU         $C74
-SECmdSiz        EQU         $C7A
+seVars          EQU         seRegs
+seD0            EQU         seVars
+seA0            EQU         seD0+32
+seA7  			EQU 		seA0+28
+sePC  			EQU 		seA7+4
+seSR  			EQU 		sePC+4
+seAccess  		EQU 		seSR+2
+seCmdSize 		EQU 		seAccess+4
+se000BE   		EQU 		seCmdSize+2
+seLastVar 		EQU 		se000BE+8
 MBdotAddr       EQU         $CA8
 MBlocAddr       EQU         $CAC
 MMUFlags        EQU         $CB0                    ; (byte) cleared to zero (reserved for future use)

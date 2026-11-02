@@ -4,6 +4,8 @@ ROMSize         EQU         $40000
 Clock1M         EQU         $FE0002
 Clock16M        EQU         $FE0000
 
+seRegs          EQU         $C30
+
 DBase           EQU         $F6E1FF
 
 VIA_Base        EQU         $F70000
