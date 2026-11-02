@@ -481,7 +481,6 @@ IconAndMaskSize EQU         ((32*32)/8)*2           ; Room for icon data and mas
 WhereStringSize EQU         32                      ; Room for the Get Info "Where:" string
 SegmentSize     EQU         512*1024
 
-numFDBAdr       EQU         16
 ; ADBDeviceEntry
             RSRESET
 fDBDevTy    RS.B    1                               ; $00  device type
@@ -511,6 +510,36 @@ pbSpareFlags RS.B   1                               ; $0D
 pbResult    RS.W    1                               ; $0E
 pbCompletion RS.L   1                               ; $10
 EgretPBSize RS.B    0                               ; $14  record size
+; IOPRequestInfo
+            RSRESET
+irQLink     RS.L    1                               ; $00
+irQType     RS.W    1                               ; $04
+irIOPNumber RS.B    1                               ; $06
+irRequestKind RS.B  1                               ; $07
+irMsgNumber RS.B    1                               ; $08
+irMessageLen RS.B   1                               ; $09
+irReplyLen  RS.B    1                               ; $0A
+irReqActive RS.B    1                               ; $0B
+irMessagePtr RS.L   1                               ; $0C
+irReplyPtr  RS.L    1                               ; $10
+irHandler   RS.L    1                               ; $14
+irReqInfoSize RS.B  0                               ; $18  record size
+; ADBMsg (CPU <-> IOP message)
+            RSRESET
+Flags       RS.B    1                               ; $00  modifier/status flags
+
+; Flags bits
+NoReply     EQU     1                               ; command timed out
+SRQReq      EQU     2                               ; device requesting service
+SetPollEnables EQU  5                               ; update auto-enable mask from ADBData
+PollEnable  EQU     6                               ; enable auto polling and auto SRQ polling
+ExplicitCmd EQU     7                               ; message contains an explicit command
+
+DataCount   RS.B    1                               ; $01  bytes of ADBData (0..8)
+ADBCmd      RS.B    1                               ; $02  ADB command
+ADBData     RS.B    8                               ; $03  ADB data
+            RSSET   (__RS+1)&~1                     ;      align 2
+ADBMsgSize  RS.B    0                               ; $0C  record size
 ; ADBVars
             RSRESET
 startDevT   RS.B    fRecSize*numFDBAdr              ; $000 device table, 16 entries
@@ -564,8 +593,20 @@ InitAddr    RS.B    1                               ; $16F address being polled 
 HWDependentVars RS.B    0                           ; $170 start of HW-dependent vars
 fDBDSize    SET     __RS                            ; $170 (generic part only)
 
+; IOP overlay
+            RSSET   HWDependentVars
+XmtRequest  RS.B    irReqInfoSize                   ; $170 host-initiated xmt request
+RcvRequest  RS.B    irReqInfoSize                   ; $188 IOP-initiated rcv request
+XmtMsg      RS.B    ADBMsgSize                      ; $1A0 xmt message buffer
+RcvMsg      RS.B    ADBMsgSize                      ; $1AC rcv message buffer
+            IF      __RS>fDBDSize
+fDBDSize    SET     __RS                            ; $1B8
+            ENDC
+
 ; Egret overlay
             RSSET   HWDependentVars
 ExplicitEPB RS.B    EgretPBSize                     ; $170 async explicit requests
 ImplicitEPB RS.B    EgretPBSize                     ; $184 implicit autopoll data
-fDBDSize    SET     __RS                            ; $198
+            IF      __RS>fDBDSize
+fDBDSize    SET     __RS                            ; $198, so stays $1B8
+            ENDC
