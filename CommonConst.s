@@ -481,10 +481,23 @@ IconAndMaskSize EQU         ((32*32)/8)*2           ; Room for icon data and mas
 WhereStringSize EQU         32                      ; Room for the Get Info "Where:" string
 SegmentSize     EQU         512*1024
 
+; Time Manager equates
+TaskActiveBit	EQU	7			                    ; High bit of QType word is active flag
+ExtendedTmTaskBit EQU 6			                    ; Indicates an extended TmTask record
+T2IntBit		EQU	5			                    ; vIER/vIFR bit number for VIA Timer 2
+
+kbdAddr     EQU     2
+mouseAddr   EQU     3
+moveTime    EQU     50
+maskADBCmd  EQU     $0C
+resetCmd    EQU     $00
+talkCmd     EQU     $0C
+listenCmd   EQU     $08
+
 ; ADBDeviceEntry
             RSRESET
 fDBDevTy    RS.B    1                               ; $00  device type
-fDBOAddr    RS.b    1                               ; $01  original address
+fDBOAddr    RS.B    1                               ; $01  original address
 fDBAddr     RS.B    1                               ; $02  current address
 fDBUnused   RS.B    1                               ; $03  unused
 fDBCRA      RS.L    1                               ; $04  completion routine

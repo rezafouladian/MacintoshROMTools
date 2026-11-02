@@ -2,6 +2,9 @@
                 include     'SCSI.s'                ; Include SCSI offsets
 bufWorldSize    EQU         $800000
 HeapStart       EQU         $2000
+
+HiIntMask       EQU         $700
+
 seRegs          EQU         $C30
 seVars          EQU         seRegs
 seD0            EQU         seVars
