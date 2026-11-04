@@ -438,7 +438,6 @@ NoQueueBit      EQU         9
 DiskInsertEvt   EQU         7
 ifCB1           EQU         4                       ; VIA interrupt flag bit for CB1
 numFDBAdr       EQU         16                      ; Number of ADB device table entries
-FRecSize        EQU         12                      ; Size of an ADB device table entry
 OurDCE          EQU         $2AC
 FDBOAddr        EQU         1                       ; ADB device table entry: original address
 FDBOpData       EQU         8                       ; ADB device table entry: optional data pointer
@@ -502,7 +501,7 @@ fDBAddr     RS.B    1                               ; $02  current address
 fDBUnused   RS.B    1                               ; $03  unused
 fDBCRA      RS.L    1                               ; $04  completion routine
 fDBOpData   RS.L    1                               ; $08  optional data buffer
-fRecSize    RS.B    0                               ; $0C  record size
+fRecSize    RS.B    0                               ; $0C  Size of an ADB device table entry
 ; ADBCmdQEntry
             RSRESET
 fQCmd       RS.B    1                               ; $00  ADB command

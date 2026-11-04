@@ -3,13 +3,13 @@ OutboundBuild   EQU         1
 BaseOfROM       EQU         $400000
 PtchROMBase     EQU         $F80000
 OutboundDisp    EQU         $700000                 ; Outbound 32KB SRAM/Internal Display
+OutboundVIA     EQU         $E7E1FE                 ; Outbound built-in VIA
 VIAB0           EQU         0                       ; ?
 PRAMBit1        EQU         1                       ; ?
 PRAMBit2        EQU         2                       ; ?
 ExpansionConn   EQU         3                       ; When something is connected to the expansion port
-RAMDiskBit      EQU         5                       ; ?
+RAMDiskBit      EQU         5                       ; Clear to access RAM Disk?
 VIAB7           EQU         7                       ; ?
-OutboundVIA     EQU         $E7E1FE                 ; Unconfirmed
 OutboundGlobals EQU         $707D00                 ; Pointer to globals used by Outbound
 PtchTblBase     EQU         $707D04                 ; Pointer to current patch source
 ExpectedPC      EQU         $707D0A                 ; Low word of PC from exception to check for patching
@@ -23,7 +23,7 @@ SCSIPresent     EQU         2                       ; SCSI related?
 HostMac         EQU         3                       ; Possibly for marking if a host system is present
 CfgBit4         EQU         4
 CfgBit5         EQU         5
-CfgBit6         EQU         6
+FlpOffline      EQU         6
 ExtFloppy       EQU         7
 OutboundCfg2    EQU         $707D09                 ; A second config space?
 Cfg2Bit0        EQU         0
@@ -77,7 +77,17 @@ SCCWBase        EQU         $BFFFF9
 
                 INCLUDE     'IWM.s'
 
+RAMDiskSize     EQU         $13C
+
 ; Floppy Stuff
+FlpVIATiming    EQU         $44                     ; [Word]
+FlpType         EQU         $3A
 FlpSectors      EQU         $3C
 FlpSides        EQU         $3D
 FlpTrkSize      EQU         $2A
+FlpLastError    EQU         $30
+FlpCylinder     EQU         $2E
+FlpStatus       EQU         5
+FlpZoneTime     EQU         -2
+LastSyncTime    EQU         -4
+FlpZoneTol      EQU         -8

@@ -75,6 +75,7 @@ BootDrive       EQU         $210                    ; Drive number of boot drive
 JShell          EQU         $212                    ; Journaling shell state [word]
 SFSaveDisk      EQU         $214                    ; Last vRefNum seen by standard file [word]
 KbdVars         EQU         $216                    ; Keyboard manager variables [4 bytes]
+HiKeyLast       EQU         $216
 JKybdTask       EQU         $21A                    ; Keyboard VBL task hook [pointer]
 KbdType   		EQU 		$21E  					; Keyboard model number [byte]
 AlarmSt         EQU         $21F
