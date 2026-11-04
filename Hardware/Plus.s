@@ -1,3 +1,7 @@
+                INCLUDE     'VIA.s'                 ; Include VIA offsets
+                INCLUDE     'SCSI.s'                ; Include SCSI offsets
+                INCLUDE     'IWM.s'                 ; Include IWM offsets
+
 VBase           EQU         $EFE1FE
 
 SCCRBase        EQU         $9FFFF8
@@ -8,7 +12,7 @@ SCSIWr          EQU         $580001
 
 ScreenLow       EQU         $3FA700
 
-BaseOfROM       EQU         $400000
+;BaseOfROM       EQU         $400000
 
 DiagROM         EQU         $F80000
 DiagROM1        EQU         $F80080

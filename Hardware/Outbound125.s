@@ -1,6 +1,6 @@
 OutboundBuild   EQU         1
 
-BaseOfROM       EQU         $400000
+;BaseOfROM       EQU         $400000
 PtchROMBase     EQU         $F80000
 OutboundDisp    EQU         $700000                 ; Outbound 32KB SRAM/Internal Display
 OutboundVIA     EQU         $E7E1FE                 ; Outbound built-in VIA

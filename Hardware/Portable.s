@@ -1,4 +1,4 @@
-BaseOfROM       EQU         $900000
+;BaseOfROM       EQU         $900000
 ROMSize         EQU         $40000
 
 Clock1M         EQU         $FE0002

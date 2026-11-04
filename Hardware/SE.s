@@ -1,4 +1,4 @@
-BaseOfROM       EQU         $400000
+;BaseOfROM       EQU         $400000
 
 HeapStart       EQU         $1600
 

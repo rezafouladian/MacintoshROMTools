@@ -1,4 +1,4 @@
-BaseOfROM       EQU         $40800000
+;BaseOfROM       EQU         $40800000
 
 SndBase         EQU         $50F14000
 
