@@ -133,45 +133,45 @@ vRTCClk         EQU  1
 vXcvrSesBit     EQU  3
 vSysSesbit      EQU  5
 
-ROMExists           EQU 0                           ; +3
-DiagROMExists       EQU 1                           ; +3
-VIA1Exists          EQU 2                           ; +3
-SCCRdExists         EQU 3                           ; +3
-SCCWrExists         EQU 4                           ; +3
-IWMExists           EQU 5                           ; +3
-PWMExists           EQU 6                           ; +3
-SoundExists         EQU 7                           ; +3
-SCSIExists          EQU 8                           ; -8, +2
-SCSIDackExists      EQU 9                           ; -8, +2
-SCSIHskExists       EQU 10                          ; -8, +2
-VIA2Exists          EQU 11                          ; -8, +2
-ASCExists           EQU 12                          ; -8, +2
-RBVExists           EQU 13                          ; -8, +2
-VDACExists          EQU 14                          ; -8, +2
-SCSIDMAExists       EQU 15                          ; -8, +2
-SWIMIOPExists       EQU 16                          ; -16, +2 (0)
-SCCIOPExists        EQU 17                          ; -16, +2 (1)
-OSSExists           EQU 18                          ; -16, +2 (2)
-FMCExists           EQU 19                          ; -16, +2 (3)
-RPUExists           EQU 20                          ; -16, +2 (4)
-OrwellExists        EQU 21                          ; -16, +2 (5)
-JAWSExists          EQU 22                          ; -16, +2 (6)
-SonicExists         EQU 23                          ; -16, +2 (7)
-SCSI96_1Exists      EQU 24                          ; -24, +1 (0)
-SCSI96_2Exists      EQU 25                          ; -24, +1 (1)
-DAFBExists          EQU 26                          ; -24, +1 (2)
-PSCExists           EQU 27                          ; -24, +1
-ROMPhysAddrExists   EQU 28                          ; -24, +1
-PatchROMExists      EQU 29                          ; -24, +1
-NewAgeExists        EQU 30                          ; -24, +1
-SingerExists        EQU 32                          ; -32
-DSPExists           EQU 33                          ; -32
-MACEExists          EQU 34                          ; -32
-MUNIExists          EQU 35                          ; -32
-AMICExists          EQU 36                          ; -32
-PrattExists         EQU 37                          ; -32
-SWIM3Exists         EQU 38                          ; -32
-AwacsExists         EQU 39                          ; -32
+ROMExists           EQU 0 
+DiagROMExists       EQU 1 
+VIA1Exists          EQU 2 
+SCCRdExists         EQU 3 
+SCCWrExists         EQU 4 
+IWMExists           EQU 5 
+PWMExists           EQU 6 
+SoundExists         EQU 7 
+SCSIExists          EQU 8 
+SCSIDackExists      EQU 9 
+SCSIHskExists       EQU 10
+VIA2Exists          EQU 11
+ASCExists           EQU 12
+RBVExists           EQU 13
+VDACExists          EQU 14
+SCSIDMAExists       EQU 15
+SWIMIOPExists       EQU 16
+SCCIOPExists        EQU 17
+OSSExists           EQU 18
+FMCExists           EQU 19
+RPUExists           EQU 20
+OrwellExists        EQU 21
+JAWSExists          EQU 22
+SonicExists         EQU 23
+SCSI96_1Exists      EQU 24
+SCSI96_2Exists      EQU 25
+DAFBExists          EQU 26
+PSCExists           EQU 27
+ROMPhysAddrExists   EQU 28
+PatchROMExists      EQU 29
+NewAgeExists        EQU 30
+SingerExists        EQU 32
+DSPExists           EQU 33
+MACEExists          EQU 34
+MUNIExists          EQU 35
+AMICExists          EQU 36
+PrattExists         EQU 37
+SWIM3Exists         EQU 38
+AwacsExists         EQU 39
 CivicExists         EQU 40
 SebastianExists     EQU 41
 BARTExists          EQU 42
@@ -225,6 +225,7 @@ bkLim           EQU         $0                      ; Last block in zone [pointe
 
 
 vblCount        EQU         $A
+vblPhase        EQU         $C                      ; VBL task phase
 
 SleepTime       EQU         $0                      ; Copies of sleep timeout values
 HDTime          EQU         $1                      ; Hard disk timeout
@@ -393,6 +394,21 @@ ioByteCount     EQU         $24
 
 noDriveErr      EQU         -64
 offLinErr       EQU         -65
+noNybErr        EQU         -66
+noAdrMkErr      EQU         -67
+dataVerErr      EQU         -68
+badCksmErr      EQU         -69
+badBtSlpErr     EQU         -70
+noDtaMkErr      EQU         -71
+badDCksum       EQU         -72
+badDBtSlp       EQU         -73
+wrUnderrun      EQU         -74
+cantStepErr     EQU         -75
+tk0BadErr       EQU         -76
+initIWMErr      EQU         -77
+twoSideErr      EQU         -78
+spdAdjErr       EQU         -79
+seekErr         EQU         -80
 
 FlashEnable     EQU         8
 MyIOPBA6        EQU         -$400
@@ -403,8 +419,7 @@ BBNewMask       EQU         $80
 BBExecMask      EQU         $40
 MyExecMask      EQU         BBNewMask+BBExecMask
 BBOldExecVers   EQU         'D'
-; Equates used by the hand-written code that the include files don't define.
-; Values are from Apple's equate files and were checked against the ROM.
+
 ABusVars        EQU         $2D8                    ; AppleTalk variables [pointer]
 noErr           EQU         0
 NoErr           EQU         0
@@ -436,7 +451,15 @@ aWrCmd          EQU         3
 rdVerify        EQU         $40
 NoQueueBit      EQU         9
 DiskInsertEvt   EQU         7
+; VIA interrupt flag/enable bits (vIFR, vIER)
+ifCA2           EQU         0
+ifCA1           EQU         1
+ifSR            EQU         2
+ifCB2           EQU         3
 ifCB1           EQU         4                       ; VIA interrupt flag bit for CB1
+ifT2            EQU         5
+ifT1            EQU         6
+ifIRQ           EQU         7
 numFDBAdr       EQU         16                      ; Number of ADB device table entries
 OurDCE          EQU         $2AC
 FDBOAddr        EQU         1                       ; ADB device table entry: original address
