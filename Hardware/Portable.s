@@ -76,3 +76,5 @@ HeapStart       EQU         $1E00
 
 DiagROM         EQU         $F80000
 DiagROM1        EQU         $F80080
+
+                include     'ASC.s'                 ; Include ASC offsets

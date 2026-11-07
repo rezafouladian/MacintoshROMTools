@@ -60,3 +60,4 @@ SCCWBase        EQU         $50F04000
 
 DBase           EQU         $50F16000
 
+                include     'ASC.s'                 ; Include ASC offsets
