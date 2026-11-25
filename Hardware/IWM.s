@@ -16,3 +16,7 @@ q6L   			EQU 		$1800
 q6H   			EQU 		$1A00
 q7L   			EQU 		$1C00
 q7H   			EQU 		$1E00
+
+wZeroes         EQU         $C00
+
+IWMInitMode     EQU         $17

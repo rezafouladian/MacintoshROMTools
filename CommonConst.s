@@ -188,8 +188,6 @@ sDeferUserFn        EQU 7
 
 RAMconfigInit   EQU         $6
 
-IWMInitMode     EQU         $17
-
 powerCntl       EQU         $10
 pMgrADBoff      EQU         $21                     ; Turn ADB auto-poll off
 xPramWrite      EQU         $32
@@ -515,6 +513,16 @@ maskADBCmd  EQU     $0C
 resetCmd    EQU     $00
 talkCmd     EQU     $0C
 listenCmd   EQU     $08
+
+; StartGlobals
+sgMaxChunks EQU     8
+            RSSET   -$14
+sgTotalRAM  RS.L    1                               ; -$14
+sgPhysicalTableOff RS.L 1                           ; -$10
+sgAllocOff  RS.L    1                               ; -$0C
+sgTopOff    RS.L    1                               ; -$08
+sgWarmStart RS.L    1                               ; -$04
+
 
 ; ADBDeviceEntry
             RSRESET
