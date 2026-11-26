@@ -11,6 +11,8 @@ ascClockRate        EQU $807
 ascPlayRecA         EQU $80A
 ascPlayRecB         EQU $80B
 ascTestReg          EQU $80F
+ascWavePhase        EQU $810
+ascWaveIncr         EQU $814
 
 bmSrcTimeIncrA      EQU $F04
 bmLeftScaleA        EQU $F06
