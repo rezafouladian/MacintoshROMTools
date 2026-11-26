@@ -24,3 +24,8 @@ bmLeftScaleB        EQU $F26
 bmRightScaleB       EQU $F27
 bmFifoControlB      EQU $F28
 bmIntControlB       EQU $F29
+
+batmanSound         EQU $B0
+elsieSound          EQU $E0
+wombatSound         EQU $BB
+
