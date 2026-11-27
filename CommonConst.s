@@ -389,6 +389,9 @@ ioPosMode       EQU         $2C
 ioPosOffset     EQU         $2E
 ioBuffer        EQU         $20
 ioByteCount     EQU         $24
+ioReqCount      EQU         $24
+ioActCount      EQU         $28
+dCtlQHead       EQU         $8
 
 noDriveErr      EQU         -64
 offLinErr       EQU         -65
